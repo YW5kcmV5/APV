@@ -1,0 +1,10 @@
+﻿Info:							https://developers.google.com/maps/documentation/geocoding/#BYB
+
+Gmail Account:					andrey.popov.spb@gmail.com
+API key (for browser apps):		AIzaSyAdffcBnwuayY8Mz5YinbSfqNxgVXmL6ZE
+Activated on:					Nov 7, 2014 2:34 AM
+Service Url:					https://maps.googleapis.com/maps/api/geocode/
+
+Users of the free API:
+        2,500 requests per 24 hour period.
+        5 requests per second.

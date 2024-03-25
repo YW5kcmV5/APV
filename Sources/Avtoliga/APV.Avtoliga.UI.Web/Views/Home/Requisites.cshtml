@@ -1,0 +1,22 @@
+﻿@using APV.Avtoliga.UI.Web.Models;
+@{
+    ViewBag.Title = "Requisites";
+    Layout = "~/Views/Layout.cshtml";
+}
+@model RequisitesModel
+
+<div class="b-body">
+
+    @Html.Partial("~/Views/SearchMenu.cshtml", @Model.ToSeachMenu())
+
+    <div class="content">
+
+        <h1>Реквизиты</h1>
+
+        <p>
+            <a class="print" onclick="return false" href="@Url.Action("Requisites", "Home", new { print = "1" })">Версия для печати</a>
+        </p>
+
+    </div>
+
+</div>

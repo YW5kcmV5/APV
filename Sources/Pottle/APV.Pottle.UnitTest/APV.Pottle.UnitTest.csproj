@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8E8E2914-1953-459F-8F52-B9C907D66DF0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>APV.Pottle.UnitTest</RootNamespace>
+    <AssemblyName>APV.Pottle.UnitTest</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessLogic\AddressManagementTests.cs" />
+    <Compile Include="BusinessLogic\Base\BaseManagementTests.cs" />
+    <Compile Include="BusinessLogic\CompanyManagementTests.cs" />
+    <Compile Include="BusinessLogic\ImageManagementTests.cs" />
+    <Compile Include="BusinessLogic\IPAddressManagementTests.cs" />
+    <Compile Include="BusinessLogic\KeywordManagementTests.cs" />
+    <Compile Include="BusinessLogic\SettingsManagementTest.cs" />
+    <Compile Include="BusinessLogic\StatisticsControllerTests.cs" />
+    <Compile Include="BusinessLogic\TrademarkManagementTest.cs" />
+    <Compile Include="BusinessLogic\TransactionScopeTests.cs" />
+    <Compile Include="BusinessLogic\UrlManagementTests.cs" />
+    <Compile Include="BusinessLogic\FileManagementTests.cs" />
+    <Compile Include="BusinessLogic\UserContextTest.cs" />
+    <Compile Include="BusinessLogic\UserManagementTests.cs" />
+    <Compile Include="BusinessLogic\WordManagementTests.cs" />
+    <Compile Include="DataLayer\CompanyTests.cs" />
+    <Compile Include="DataLayer\LocationTests.cs" />
+    <Compile Include="DataLayer\UserTests.cs" />
+    <Compile Include="DataLayer\DataImageTests.cs" />
+    <Compile Include="DataLayer\DataXmlTests.cs" />
+    <Compile Include="Resources\ResourceManager.cs" />
+    <Compile Include="System\AbsoluteUriTests.cs" />
+    <Compile Include="System\ComparatorTests.cs" />
+    <Compile Include="System\ConverterTests.cs" />
+    <Compile Include="System\IconContainerTest.cs" />
+    <Compile Include="System\ImageContainerTests.cs" />
+    <Compile Include="System\MnemonicColorTests.cs" />
+    <Compile Include="System\WatchdogTimerTests.cs" />
+    <Compile Include="System\WebUtilityTests.cs" />
+    <Compile Include="TestManager.cs" />
+    <Compile Include="DataLayer\Base\BaseTests.cs" />
+    <Compile Include="DataLayer\DataFileTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Toolkit\HtmlParserTests.cs" />
+    <Compile Include="Toolkit\IPLocatorTests.cs" />
+    <Compile Include="Toolkit\GoogleGeoLocatorTests.cs" />
+    <Compile Include="Toolkit\TranslitTests.cs" />
+    <Compile Include="WebParsers\ColorParserTests.cs" />
+    <Compile Include="WebParsers\AvtobergWebParserTests.cs" />
+    <Compile Include="WebParsers\ProductCharacteristicInfoTest.cs" />
+    <Compile Include="WebParsers\VotoniaWebParserTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\APV\APV.EntityFramework\APV.EntityFramework.csproj">
+      <Project>{2E0F252F-FADA-4D3D-99B8-67742DD1365A}</Project>
+      <Name>APV.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\APV\APV.Common\APV.Common.csproj">
+      <Project>{464E5897-E88C-4AA9-8B53-58F40D659158}</Project>
+      <Name>APV.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\APV\APV.GraphicsLibrary\APV.GraphicsLibrary.csproj">
+      <Project>{FC6B973C-89D2-421A-A2C7-76901DDEFD66}</Project>
+      <Name>APV.GraphicsLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\APV.Pottle.Common\APV.Pottle.Common.csproj">
+      <Project>{3F10F16C-DDF5-4DBE-AC2C-D8C4F9DCFD76}</Project>
+      <Name>APV.Pottle.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\APV.Pottle.Core\APV.Pottle.Core.csproj">
+      <Project>{6A2A03A1-0249-4F33-9B35-319074387317}</Project>
+      <Name>APV.Pottle.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\APV.Pottle.Toolkit\APV.Pottle.Toolkit.csproj">
+      <Project>{5B01518B-B08B-481A-91F0-0EE21154643B}</Project>
+      <Name>APV.Pottle.Toolkit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\APV.Pottle.WebParsers\APV.Pottle.WebParsers.csproj">
+      <Project>{9A902BA1-44B6-44B5-8704-A608F280084B}</Project>
+      <Name>APV.Pottle.WebParsers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\TestIcon.ico" />
+    <EmbeddedResource Include="Resources\TestLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AI10091-191-R.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,28 @@
+﻿@using APV.Avtoliga.UI.Web.Models.Entities
+
+@model ArticleInfo
+@{
+    ViewBag.Title = "Article";
+    Layout = "~/Views/Layout.cshtml";
+}
+
+<div class="b-body">
+
+    <div class="breadcrumbs">
+        <a href="@Url.Action("Articles", "Home", new { groupId = "" })">Статьи</a> /
+        @foreach (ArticleGroupInfo articleGroupInfo in Model.Breadcrumbs)
+        {
+            <a href="@articleGroupInfo.Url">@articleGroupInfo.Name</a>@Html.Raw(" /");
+        }
+    </div>
+    <h1>Скидки для партнеров.</h1>
+
+    @Html.Partial("~/Views/SearchMenu.cshtml", @Model.ToSeachMenu())
+
+    <div class="content">
+        @Html.Raw(Model.Html)
+    </div>
+
+    <div class="date">@Model.CreatedAt.ToShortDateString()</div>
+
+</div>

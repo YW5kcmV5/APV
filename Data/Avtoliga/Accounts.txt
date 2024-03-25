@@ -1,0 +1,32 @@
+Хостинг:
+	URL:		http://panel.infobox.ru/
+	Login:		n1158447943
+	Password:	9Ruqn8E%Z7
+
+
+Test certificate:
+	URL:		https://secure.instantssl.com
+	Username:	info@avtoliga24.ru
+	Password:	Avtoliga@xml1
+
+Почта:
+	Mail:		admin@avtoliga24.ru
+	Password:	Avtoliga.xml
+
+Yandex:
+	Login:				avtoliga24
+	Password:			Avtoliga.xml
+	Контрольный вопрос:		Фамилия владельца
+	Ответ на контрольный вопрос:	Скворцов
+	Счётчик №:			36549055
+	Метрика:			https://metrika.yandex.ru
+	Индекс:				https://www.webmaster.yandex.ru
+
+GMail
+	Login:				avtoliga24.spb@gmail.com
+	Password:			Avtoliga.xml
+	Резервный адрес:		admin@avtoliga24.ru
+	Метрика:			https://analytics.google.com/
+	Индекс:				https://www.google.com/webmasters/tools/
+	
+	

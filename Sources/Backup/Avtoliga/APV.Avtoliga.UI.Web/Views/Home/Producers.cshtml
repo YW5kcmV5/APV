@@ -1,0 +1,31 @@
+﻿@using APV.Avtoliga.UI.Web.Models.Entities
+
+@model ProducerInfo[]
+@{
+    ViewBag.Title = "Producers";
+    Layout = "~/Views/Layout.cshtml";
+}
+
+<div class="b-body">
+
+    <h1>Каталог производителей</h1>
+
+    <div class="promo">
+        <p>Данный раздел содержит краткую и интересную информацию об основных производителях наших запчастей и оптики.</p>
+    </div>
+
+    <ul class="producers">
+
+        @foreach (ProducerInfo producerInfo in Model)
+        {
+            <li>
+                <a href="@producerInfo.Url">
+                    <img alt="@producerInfo.Name" src="@producerInfo.LogoUrl">
+                    <span class="title">@producerInfo.Name</span>
+                </a>
+            </li>
+        }
+
+    </ul>
+    
+</div>

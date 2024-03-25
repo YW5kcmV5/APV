@@ -1,0 +1,126 @@
+﻿@using APV.Avtoliga.UI.Web
+@using APV.Avtoliga.UI.Web.Models.Entities
+
+@model ProductInfo
+@{
+    ViewBag.Title = "Product";
+    Layout = "~/Views/Layout.cshtml";
+    var productJson = @Model.ToJsonString();
+}
+
+<div class="b-body" ng-controller="ProductController" ng-init="init('@productJson')">
+    
+    <h2>Каталог запчастей</h2>
+    
+    <div class="b-help">
+        <a role="menu-dropdown" href="#">Помощь</a>
+        <ul style="display: none;">
+            <li>
+                <a href="/help/how-to-order.html">Как заказать?</a>
+            </li>
+            <li>
+                <a href="/help/guarantee.html">Оплата и гарантии</a>
+            </li>
+            <li>
+                <a href="/help/delivery.html">Доставка заказа</a>
+            </li>
+            <li>
+                <a href="/help/back.html">Возврат деталей</a>
+            </li>
+        </ul>
+    </div>
+
+    @Html.Partial("~/Views/SearchMenu.cshtml", @Model.ToSeachMenu())
+
+    <div class="b-card">
+        
+        <a class="btn-close" href="javascript:history.back()">×</a>
+        <h1>@Model.Name</h1>
+        <hr>
+        
+        <div class="b-info">
+            <a class="photo" href="#" rel="lightbox" ng-click="showGallery()" onclick="javascript:return false;">
+                <div>
+                    <div></div>
+                    <div>
+                        <img alt="Фото" src="@Model.LogoUrl">
+                    </div>
+                    <div></div>
+                </div>
+            </a>
+            <div class="store1">
+                @Model.Cost
+                <span class="ruble">руб.</span>
+            </div>
+            <button class="quick-order" type="button">Заказать в один клик</button>
+        </div>
+
+        <div class="b-details">
+            <dl>
+                <dt>Марка:</dt>
+                <dd>@Model.Model.Trademark.Name</dd>
+                <dt>Модель:</dt>
+                <dd>@Model.Model.Name</dd>
+                <dt>Модель выпуска:</dt>
+                <dd>@Model.Model.Period</dd>
+                <dt>Год выпуска:</dt>
+                <dd>@Model.Period</dd>
+                <dt>В наличии:</dt>
+                <dd>@if (!@Model.OutOfStock)
+                    {
+                        @:есть
+                    }
+                    else
+                    {
+                        @:нет
+                    }
+                </dd>
+                @if (!@Model.OutOfStock)
+                {
+                    <dt>Срок доставки:</dt>
+                    <dd>@Model.DeliveryTime</dd>
+                }
+            </dl>
+            <h3>Дополнительные характеристики</h3>
+            <dl>
+                @if (!string.IsNullOrWhiteSpace(@Model.Article))
+                {
+                    <dt>Оригинальный номер:</dt>
+                    <dd>@Model.Article</dd>
+                }
+                @if (@Model.Producer != null)
+                {
+                    <dt>Производитель:</dt>
+                    <dd>
+                        <a href="@Model.Producer.Url">@Model.Producer.Name</a>
+                    </dd>
+                    <dt>Номер по каталогу:</dt>
+                    <dd>@Model.ProducerArticle</dd>
+                }
+            </dl>
+        </div>
+
+        <div class="social">
+        </div>
+
+    </div>
+    
+    @if ((Model.TogetherProducts != null) && (Model.TogetherProducts.Length > 0))
+    {
+        <div class="b-buy-together">
+            <h2>С этим товаром заказывают</h2>
+            <ul>
+                @foreach (ProductInfo reference in Model.TogetherProducts)
+                {
+                    <li>
+                        <a href="@reference.Url">
+                            <img alt="Фото" src="@reference.LogoUrl">
+                            <span>@reference.Name</span>
+                        </a>
+                    </li>
+                }
+            </ul>
+        </div>
+    }
+
+</div>

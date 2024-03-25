@@ -1,0 +1,36 @@
+﻿@using APV.Avtoliga.UI.Web.Models;
+@using APV.Avtoliga.UI.Web.Models.Entities;
+@{
+    ViewBag.Title = "Offers";
+    Layout = "~/Views/Layout.cshtml";
+}
+@model OffersModel
+
+<div class="b-body">
+
+    <h1>Спецпредложения и скидки на кузовные запчасти и оптику</h1>
+
+    <div class="promo">
+        <p>В разделе собраны все актуальные скидки и акции на автозапчасти (кузовные запчасти, оптика и т.д.). Раздел регулярно пополняется — следите за обновлениями!</p>
+    </div>
+
+    <ul class="specoffers">
+        @foreach (ProductInfo productInfo in Model.Products)
+        {
+            <li>
+                <a href="@productInfo.Url">
+                    <img alt="Фото" src="@productInfo.LogoUrl" />
+                </a>
+                <h2>@productInfo.Name</h2>
+                <p>
+                    @productInfo.SpecialOfferDescription
+                </p>
+                <div class="price">@productInfo.Cost
+                    <span class="ruble">руб.</span>
+                </div>
+                <a href="@productInfo.Url" class="buy">Купить</a>
+            </li>
+        }
+    </ul>
+
+</div>

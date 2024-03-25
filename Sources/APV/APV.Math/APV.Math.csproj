@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FFD8AD88-A8F6-4D5E-AB02-CEEDC66DA60D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>APV.Math</RootNamespace>
+    <AssemblyName>APV.Math</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interfaces.cs" />
+    <Compile Include="MathFilters.cs" />
+    <Compile Include="MathHelper.cs" />
+    <Compile Include="MathObjects\Calculations\MathOperationItem.cs" />
+    <Compile Include="MathObjects\Calculations\MathOperationContext.cs" />
+    <Compile Include="MathObjects\Calculations\MathArgumentItem.cs" />
+    <Compile Include="MathObjects\Calculators\Int64Calculator.cs" />
+    <Compile Include="MathObjects\Calculators\MathCalculator.cs" />
+    <Compile Include="MathObjects\Calculators\MathCalculatorFunctionAttribute.cs" />
+    <Compile Include="MathObjects\Calculations\BaseMathCalculationItem.cs" />
+    <Compile Include="MathObjects\Expressions\BaseMathExpressionItem.cs" />
+    <Compile Include="MathObjects\Expressions\MathExpressionOperation.cs" />
+    <Compile Include="MathObjects\Expressions\MathExpressionArgument.cs" />
+    <Compile Include="MathObjects\Expressions\MathExpressionScope.cs" />
+    <Compile Include="MathObjects\Expressions\Optimizers\BaseMathExpressionOptimizer.cs" />
+    <Compile Include="MathObjects\Expressions\Optimizers\SimpleMathExpressionOptimizer.cs" />
+    <Compile Include="MathObjects\Expressions\RpnProvider.cs" />
+    <Compile Include="MathObjects\Functions\MathFunctionType.cs" />
+    <Compile Include="MathObjects\Matrixes\IntMatrix.cs" />
+    <Compile Include="MathObjects\Numbers\BigFloatNumber.cs" />
+    <Compile Include="MathObjects\Numbers\BigIntegerNumber.cs" />
+    <Compile Include="MathObjects\Numbers\Int64Number.cs" />
+    <Compile Include="MathObjects\Numbers\IntegerNumber.cs" />
+    <Compile Include="MathObjects\Numbers\NaturalNumber.cs" />
+    <Compile Include="MathObjects\MathObjectType.cs" />
+    <Compile Include="MathObjects\Helpers\QuickSort.cs" />
+    <Compile Include="MathObjects\Vectors\IntVector.cs" />
+    <Compile Include="Primitive3D\Entities\Line3D.cs" />
+    <Compile Include="Primitive3D\Entities\Matrix33.cs" />
+    <Compile Include="Primitive3D\Entities\Object3D.cs" />
+    <Compile Include="Primitive3D\Entities\Cube3D.cs" />
+    <Compile Include="Primitive3D\Entities\Vector3.cs" />
+    <Compile Include="Primitive3D\IPrimitive3D.cs" />
+    <Compile Include="Primitive3D\Primitive3DPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Primitive3D\Entities\Bitmap3D.cs" />
+    <Compile Include="Primitive3D\Entities\Camera3D.cs" />
+    <Compile Include="Primitive3D\Entities\Matrix3D.cs" />
+    <Compile Include="Primitive3D\Entities\Vector3D.cs" />
+    <Compile Include="Primitive3D\Entities\Triangle3D.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Types.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\APV.Common\APV.Common.csproj">
+      <Project>{464E5897-E88C-4AA9-8B53-58F40D659158}</Project>
+      <Name>APV.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Expressions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Primitive3D\Primitive3DPanel.resx">
+      <DependentUpon>Primitive3DPanel.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

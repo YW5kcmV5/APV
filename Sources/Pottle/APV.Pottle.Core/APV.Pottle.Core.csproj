@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6A2A03A1-0249-4F33-9B35-319074387317}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>APV.Pottle.Core</RootNamespace>
+    <AssemblyName>APV.Pottle.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\ContextManager.cs" />
+    <Compile Include="Application\UserContext.cs" />
+    <Compile Include="BusinessLogic\BusinessTypeManagement.cs" />
+    <Compile Include="BusinessLogic\CompanyManagement.cs" />
+    <Compile Include="BusinessLogic\CookiesManager.cs" />
+    <Compile Include="BusinessLogic\AddressManagement.cs" />
+    <Compile Include="BusinessLogic\KeywordReferenceManagement.cs" />
+    <Compile Include="BusinessLogic\Statistics\StatisticsController.cs" />
+    <Compile Include="BusinessLogic\Statistics\StatisticsSearchController.cs" />
+    <Compile Include="BusinessLogic\WordReferenceManagement.cs" />
+    <Compile Include="BusinessLogic\WordManagement.cs" />
+    <Compile Include="BusinessLogic\SettingsManagement.cs" />
+    <Compile Include="BusinessLogic\IPAddressManagement.cs" />
+    <Compile Include="BusinessLogic\LanguageManagement.cs" />
+    <Compile Include="BusinessLogic\KeywordManagement.cs" />
+    <Compile Include="BusinessLogic\SupplierManagement.cs" />
+    <Compile Include="BusinessLogic\Extensions\ImageManagementExtensions.cs" />
+    <Compile Include="BusinessLogic\Extensions\UrlManagementExtensions.cs" />
+    <Compile Include="BusinessLogic\UrlManagement.cs" />
+    <Compile Include="BusinessLogic\SupplierProductManagement.cs" />
+    <Compile Include="BusinessLogic\ProductManagement.cs" />
+    <Compile Include="BusinessLogic\CountryManagement.cs" />
+    <Compile Include="BusinessLogic\TrademarkManagement.cs" />
+    <Compile Include="BusinessLogic\Extensions\UserManagementExtensions.cs" />
+    <Compile Include="BusinessLogic\XmlManagement.cs" />
+    <Compile Include="BusinessLogic\ImageManagement.cs" />
+    <Compile Include="BusinessLogic\FileManagement.cs" />
+    <Compile Include="BusinessLogic\Helpers\BaseManagement.cs" />
+    <Compile Include="BusinessLogic\LocationManagement.cs" />
+    <Compile Include="BusinessLogic\SessionManager.cs" />
+    <Compile Include="BusinessLogic\UserManagement.cs" />
+    <Compile Include="DataLayer\BusinessTypeDataLayerManager.cs" />
+    <Compile Include="DataLayer\CompanyDataLayerManager.cs" />
+    <Compile Include="DataLayer\AddressDataLayerManager.cs" />
+    <Compile Include="DataLayer\KeywordReferenceDataLayerManager.cs" />
+    <Compile Include="DataLayer\WordReferenceDataLayerManager.cs" />
+    <Compile Include="DataLayer\WordDataLayerManager.cs" />
+    <Compile Include="DataLayer\SettingDataLayerManager.cs" />
+    <Compile Include="DataLayer\IPAddressDataLayerManager.cs" />
+    <Compile Include="DataLayer\LanguageDataLayerManager.cs" />
+    <Compile Include="DataLayer\KeywordDataLayerManager.cs" />
+    <Compile Include="DataLayer\SupplierDataLayerManager.cs" />
+    <Compile Include="DataLayer\UrlDataLayerManager.cs" />
+    <Compile Include="DataLayer\SupplierProductDataLayerManager.cs" />
+    <Compile Include="DataLayer\ProductDataLayerManager.cs" />
+    <Compile Include="DataLayer\CountryDataLayerManager.cs" />
+    <Compile Include="DataLayer\TrademarkDataLayerManager.cs" />
+    <Compile Include="DataLayer\LocationDataLayerManager.cs" />
+    <Compile Include="Entities\AddressEntity.cs" />
+    <Compile Include="Entities\BusinessTypeEntity.cs" />
+    <Compile Include="Entities\Collection\BusinessTypeCollection.cs" />
+    <Compile Include="Entities\Collection\CompanyCollection.cs" />
+    <Compile Include="Entities\Collection\AddressCollection.cs" />
+    <Compile Include="Entities\Collection\KeywordReferenceCollection.cs" />
+    <Compile Include="Entities\Collection\WordReferenceCollection.cs" />
+    <Compile Include="Entities\Collection\WordCollection.cs" />
+    <Compile Include="Entities\Collection\SettingCollection.cs" />
+    <Compile Include="Entities\Collection\IPAddressCollection.cs" />
+    <Compile Include="Entities\Collection\LanguageCollection.cs" />
+    <Compile Include="Entities\Collection\KeywordCollection.cs" />
+    <Compile Include="Entities\Collection\SupplierCollection.cs" />
+    <Compile Include="Entities\Collection\UrlCollection.cs" />
+    <Compile Include="Entities\Collection\SupplierProductCollection.cs" />
+    <Compile Include="Entities\Collection\ProductCollection.cs" />
+    <Compile Include="Entities\Collection\CountryCollection.cs" />
+    <Compile Include="Entities\Collection\TrademarkCollection.cs" />
+    <Compile Include="Entities\Collection\DataFileCollection.cs" />
+    <Compile Include="Entities\Collection\DataImageCollection.cs" />
+    <Compile Include="Entities\Collection\DataXmlCollection.cs" />
+    <Compile Include="Entities\Collection\LocationCollection.cs" />
+    <Compile Include="Entities\Collection\TechnicalAuditCollection.cs" />
+    <Compile Include="Entities\Collection\UserCollection.cs" />
+    <Compile Include="Entities\CompanyEntity.cs" />
+    <Compile Include="Entities\KeywordReferenceEntity.cs" />
+    <Compile Include="Entities\WordEntity.cs" />
+    <Compile Include="Entities\SettingEntity.cs" />
+    <Compile Include="Entities\IPAddressEntity.cs" />
+    <Compile Include="Entities\LanguageEntity.cs" />
+    <Compile Include="Entities\KeywordEntity.cs" />
+    <Compile Include="Entities\SupplierProductEntity.cs" />
+    <Compile Include="Entities\SupplierEntity.cs" />
+    <Compile Include="Entities\CountryEntity.cs" />
+    <Compile Include="DataLayer\FileDataLayerManager.cs" />
+    <Compile Include="DataLayer\ImageDataLayerManager.cs" />
+    <Compile Include="DataLayer\UserDataLayerManager.cs" />
+    <Compile Include="DataLayer\XmlDataLayerManager.cs" />
+    <Compile Include="Entities\DataFileEntity.cs" />
+    <Compile Include="Entities\DataImageEntity.cs" />
+    <Compile Include="Entities\DataXmlEntity.cs" />
+    <Compile Include="Entities\LocationEntity.cs" />
+    <Compile Include="Entities\TrademarkEntity.cs" />
+    <Compile Include="Entities\ProductEntity.cs" />
+    <Compile Include="Entities\TechnicalAuditEntity.cs" />
+    <Compile Include="Entities\UrlEntity.cs" />
+    <Compile Include="Entities\UserEntity.cs" />
+    <Compile Include="Entities\WordReferenceEntity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\APV\APV.EntityFramework\APV.EntityFramework.csproj">
+      <Project>{2E0F252F-FADA-4D3D-99B8-67742DD1365A}</Project>
+      <Name>APV.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\APV\APV.Common\APV.Common.csproj">
+      <Project>{464E5897-E88C-4AA9-8B53-58F40D659158}</Project>
+      <Name>APV.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\APV\APV.GraphicsLibrary\APV.GraphicsLibrary.csproj">
+      <Project>{FC6B973C-89D2-421A-A2C7-76901DDEFD66}</Project>
+      <Name>APV.GraphicsLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\APV.Pottle.Common\APV.Pottle.Common.csproj">
+      <Project>{3f10f16c-ddf5-4dbe-ac2c-d8c4f9dcfd76}</Project>
+      <Name>APV.Pottle.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\APV.Pottle.Toolkit\APV.Pottle.Toolkit.csproj">
+      <Project>{5B01518B-B08B-481A-91F0-0EE21154643B}</Project>
+      <Name>APV.Pottle.Toolkit</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

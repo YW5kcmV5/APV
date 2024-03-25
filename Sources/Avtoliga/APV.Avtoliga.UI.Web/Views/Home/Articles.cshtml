@@ -1,0 +1,47 @@
+﻿@using APV.Avtoliga.UI.Web.Models;
+@using APV.Avtoliga.UI.Web.Models.Entities
+@{
+    ViewBag.Title = "Articles";
+    Layout = "~/Views/Layout.cshtml";
+}
+@model ArticlesModel
+
+<div class="b-body">
+
+    <div class="breadcrumbs header">
+        <h1>Статьи</h1>
+    </div>
+
+    @if (Model.Groups != null)
+    {
+        <ul class="list_content no-image">
+            @foreach (ArticleGroupInfo articleGroupInfo in Model.Groups)
+            {
+                <li>
+                    <h2>
+                        <a href="@articleGroupInfo.Url">@articleGroupInfo.Name</a>
+                    </h2>
+                </li>
+            }
+        </ul>
+    }
+
+    @if (Model.Articles != null)
+    {
+        <ul class="list_content no-image">
+            @foreach (ArticleInfo articleInfo in Model.Articles)
+            {
+                <li id="article15">
+                    <div class="b-header">
+                        <h2>
+                            <a href="@articleInfo.Url">@articleInfo.Name</a>
+                        </h2>
+                        <div class="date">@articleInfo.CreatedAt.ToShortDateString()</div>
+                    </div>
+                    <p>@articleInfo.Description</p>
+                </li>
+            }
+        </ul>
+    }
+
+</div>

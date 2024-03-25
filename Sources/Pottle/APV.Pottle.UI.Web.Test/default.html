@@ -1,0 +1,1013 @@
+﻿<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>Корзинка</title>
+        <!-- Links -->
+        <link rel="stylesheet" href="css/common.css" />
+        <link rel="stylesheet" href="css/main-theme/jquery.ui.all.css" />
+        <link rel="stylesheet" href="css/main-menu.css" />
+        <link rel="stylesheet" href="css/sub-menu.css" />
+        <link rel="stylesheet" href="css/dialog-bottom-tooltip.css" />
+        <link rel="stylesheet" href="css/dialog-list.css" />
+        <link rel="stylesheet" href="css/search-box.css" />
+        <link rel="stylesheet" href="css/group-area.css" />
+        <link rel="stylesheet" href="css/purchase-list.css" />
+        <!-- Scripts -->
+        <script src="Js/jquery-1.10.2.js"></script>
+        <script src="Js/jquery-ui-1.10.4.main.js"></script>
+    </head>
+    <body>
+        
+        <div id="page_layout">
+            
+            <div id="page_header">
+                <div id="top_nav" class="head_nav">
+                    <table cellspacing="0" cellpadding="0" id="top_links">
+                        <tbody>
+                            <tr>
+                                <td><div id="head_small_logo" /></td>
+                                <td><div id="head_small_title" /></td>
+                                <td id="head_empty"></td>
+                                <td><a id="head_people" class="top_nav_link">люди</a></td>
+                                <td><a id="head_rules" class="top_nav_link">правила</a></td>
+                                <td><a id="head_help" class="top_nav_link">помощь</a></td>
+                                <td><a id="head_exit" class="top_nav_link">выйти</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div id="page_logo">
+                <div id="logo_left_panel">
+                    <img id="image_logo" src="Image/Logo.png" alt="Лого" />
+                    <img id="image_title" src="Image/Title.png" alt="Корзинка" width="248" height="65" />
+                </div>
+                <div id="logo_right_panel" class="ui-widget ui-widget-content ui-corner-all">
+                    <div class="info-panel-left">
+                        <a class="info-panel-ref">
+                            <span class="ui-icon ui-icon-cart"></span>
+                            <div>
+                                <span class="info-panel-count">7</span>
+                                <span>закупок</span>
+                            </div>
+                        </a>
+                        <a class="info-panel-ref">
+                            <span class="ui-icon ui-icon-calculator"></span>
+                            <div>
+                                <span class="info-panel-count">4</span>
+                                <span>активных закупки</span>
+                            </div>
+                        </a>
+                        <a class="info-panel-ref">
+                            <span class="ui-icon ui-icon-contact"></span>
+                            <div>
+                                <span class="info-panel-count">2</span>
+                                <span>закупки к оплате</span>
+                            </div>
+                        </a>
+                        <a class="info-panel-ref">
+                            <span class="ui-icon ui-icon-clock"></span>
+                            <div>
+                                <span class="info-panel-count">1</span>
+                                <span>закупка в доставке</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="info-panel-right">
+                        <a class="info-panel-ref">
+                            <span class="ui-icon ui-icon-mail-closed"></span>
+                            <div>
+                                <span class="info-panel-count">5</span>
+                                <span>сообщений </span>
+                            </div>
+                        </a> 
+                        <a class="info-panel-ref">
+                            <span class="ui-icon ui-icon-flag"></span>
+                            <div>
+                                <span class="info-panel-count">7</span>
+                                <span>уведомлений </span>
+                            </div>
+                        </a> 
+                        <a class="info-panel-ref">
+                            <span class="ui-icon ui-icon-person"></span>
+                            <div>
+                                <span class="info-panel-count">13</span>
+                                <span>друзей </span>
+                            </div>
+                        </a> 
+                    </div>
+                </div>
+            </div>
+            
+            <div id="page_content">
+                <div id="main-menu">
+                    <ul>
+                        <li><a href="#fragment-1"><span>Моя страница</span></a></li>
+                        <li><a href="#main-purchases"><span>Мои закупки</span></a></li>
+                        <li><a href="#fragment-3"><span>Мои магазины</span></a></li>
+                        <li><a href="#main-news-menu"><span>Мои новости</span></a></li>
+                        <li><a href="#fragment-5"><span>Мои сообщения</span></a></li>
+                        <li><a href="#fragment-6"><span>Мои настройки</span></a></li>
+                    </ul>
+                    <div id="fragment-1">
+                        Личная информация пользователя
+                    </div>
+                   
+                    <!-- Мои закупки -->
+                    <div id="main-purchases" class="sub-menu">
+                        <!-- Работа с закупками -->
+                        <ul>
+                            <li><a href="#purchases-1"><span>Все</span></a></li>
+                            <li><a href="#purchases-2"><span>Активные</span><span class="count">(3)</span></a></li>
+                            <li><a href="#purchases-3"><span>В обработке</span><span class="count">(2)</span></a></li>
+                            <li><a href="#purchases-4"><span>К оплате</span><span class="count">(1)</span></a></li>
+                            <li><a href="#purchases-5"><span>В доставке</span></a></li>
+                            <li><a href="#purchases-6"><span></span>Нужно забрать<span></span></a></li>
+                            <li><a href="#purchases-7"><span></span><span>Завершённые</span></a></li>
+                        </ul>
+                        <div id="purchases-1">
+                            <div class="group_area_wrap">
+                                <div class="group_area">
+                                    <span class="group_area_active">
+                                        <a href="#">Статус</a>
+                                        <span class="ui-icon ui-icon-arrowthick-1-n"></span>
+                                        <span style="display:none;" class="ui-icon ui-icon-arrowthick-1-s"></span>
+                                    </span>
+                                    <span class="group_area_divider">|</span>
+                                    <span><a href="#">Магазин</a></span>
+                                    <span class="group_area_divider">|</span>
+                                    <span><a href="#">Организатор</a></span>
+                                    <span class="group_area_divider">|</span>
+                                    <span><a href="#">Дата открытия</a></span>
+                                </div>
+                            </div>
+                            <div class="purchase-list">
+                                <div class="purchase-list-title">
+                                    <span>Активные</span>
+                                    <span class="count">(3)</span>
+                                </div>
+                                <div class="left">
+                                    <div class="delimiter"></div>
+                                    
+                                    <!-- Сима/Экономка/Вика/закупка1-->
+                                    <div class="purchase-list-block">
+                                        <table>
+                                            <tr>
+                                                <td rowspan="2" class="logo">
+                                                    <div>
+                                                        <a class="image-zoom" href="#">
+                                                            <span>Увеличить</span>
+                                                        </a>
+                                                        <img alt="Сима" src="Image/закупка1.jpg"/>
+                                                    </div>
+                                                </td>
+                                                <td class="caption">
+                                                    <div>
+                                                        <table>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-cart"></span></td>
+                                                                <td><a class="text" href="#">Сима</a><a class="text" href="#">(1)</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-cart"></span></td>
+                                                                <td><a class="text" href="#">Экономка</a><a class="text" href="#">(Вика)</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-calculator"></span></td>
+                                                                <td><a class="text" href="#">Активная</a></td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                                <td class="action">
+                                                    <div>
+                                                        <span>Правила закупки</span>
+                                                        <span>Участники закупки</span>
+                                                        <span>Сообщения</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" class="info">
+                                                    <div>
+                                                        <table>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-calendar"></span></td>
+                                                                <td><span class="text">Период работы:</span></td>
+                                                                <td>
+                                                                    <div class="period-container">
+                                                                        <div class="left"><div></div></div>
+                                                                        <div class="right"><div></div></div>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td />
+                                                                <td><span class="text">Товаров:</span></td>
+                                                                <td><span class="text value">5</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-person"></span></td>
+                                                                <td><span class="text">Участников:</span></td>
+                                                                <td><span class="text value">25</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-person"></span></td>
+                                                                <td><span class="text">Наценка:</span></td>
+                                                                <td><span class="text value blue">12%</span></td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <div class="state-container">
+                                            <div class="fullness">
+                                                    <div class="dialog-bottom-tooltip" style="display: none;">
+                                                        <div class="top"></div>
+                                                        <div class="body">
+                                                            <span class="title">Текущая собираемость</span>
+                                                            <span class="text">
+                                                                Набрано товаров на 40% от необходимой суммы.<br>
+                                                                235 товаров на 13 576 рублей 13 коопеек.
+                                                            </span>
+                                                        </div>
+                                                        <div class="shadow"></div>
+                                                    </div>
+                                            </div>
+                                            <div class="state">
+                                                <!-- Активная -->
+                                                <div class="active">
+                                                    <div class="dialog-bottom-tooltip" style="display: none;">
+                                                        <div class="top"></div>
+                                                        <div class="body">
+                                                            <span class="title">Активная (открытая) закупка</span>
+                                                            <span class="text">
+                                                                В данном состояние возможен выбор товара,
+                                                                изменение количества заказанного товара,
+                                                                добавление нового товара с оптового сайта.
+                                                            </span>
+                                                        </div>
+                                                        <div class="shadow"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- В обработке (Стоп заказ) -->
+                                                <div>
+                                                    <div class="dialog-bottom-tooltip" style="display: none;">
+                                                        <div class="top"></div>
+                                                        <div class="body">
+                                                            <span class="title">Закупка в обработке ("стоп" заказ)</span>
+                                                            <span class="text">
+                                                                Закупка находится в обработке у администратора,
+                                                                изменение заявки, добавление, удаление или изменение
+                                                                количества товаров на данном этапе невозможно.
+                                                            </span>
+                                                        </div>
+                                                        <div class="shadow"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- К оплате -->
+                                                <div>
+                                                    <div class="dialog-bottom-tooltip" style="display: none;">
+                                                        <div class="top"></div>
+                                                        <div class="body">
+                                                            <span class="title">Закупка в оплате</span>
+                                                            <span class="text">
+                                                                Необходимо оплатить заказанные товары,
+                                                                в случае задержек при оплате возможны
+                                                                штрафные санкции со стороны администратора
+                                                                закупки.
+                                                            </span>
+                                                        </div>
+                                                        <div class="shadow"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- В доставке -->
+                                                <div>
+                                                    <div class="dialog-bottom-tooltip" style="display: none;">
+                                                        <div class="top"></div>
+                                                        <div class="body">
+                                                            <span class="title">В доставке</span>
+                                                            <span class="text">
+                                                                Ожидается доставка товара к на склад
+                                                                администратору закупки, после
+                                                                доставки товара товар будет доступен
+                                                                в точках выдачи.
+                                                            </span>
+                                                        </div>
+                                                        <div class="shadow"></div>
+                                                    </div>
+                                                </div>
+                                                <!-- Нужно забрать (Готовая) -->
+                                                <div>
+                                                    <div class="dialog-bottom-tooltip" style="display: none;">
+                                                        <div class="top"></div>
+                                                        <div class="body">
+                                                            <span class="title">Готово</span>
+                                                            <span class="text">
+                                                                Все товары по данной закупки
+                                                                поступили в пункты выдачи,
+                                                                Вы можете забрать товар.
+                                                            </span>
+                                                        </div>
+                                                        <div class="shadow"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="delimiter"></div>
+                                    
+                                    <!-- Лукошко/Экономка/Лена/закупка2-->
+                                    <div class="purchase-list-block">
+                                        <table>
+                                            <tr>
+                                                <td rowspan="2" class="logo">
+                                                    <div>
+                                                        <a class="image-zoom" href="#">
+                                                            <span>Увеличить</span>
+                                                        </a>
+                                                        <img alt="Сима" src="Image/закупка2.jpg"/>
+                                                    </div>
+                                                </td>
+                                                <td class="caption">
+                                                    <div>
+                                                        <table>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-cart"></span></td>
+                                                                <td><a class="text" href="#">Лукошко</a><a class="text" href="#">(1)</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-cart"></span></td>
+                                                                <td><a class="text" href="#">Экономка</a><a class="text" href="#">(Лена)</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-calculator"></span></td>
+                                                                <td><a class="text" href="#">Активная</a></td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                                <td class="action">
+                                                    <div>
+                                                        <span>Правила закупки</span>
+                                                        <span>Участники закупки</span>
+                                                        <span>Сообщения</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" class="info">
+                                                    <div>
+                                                        <table>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-calendar"></span></td>
+                                                                <td><span class="text">Период работы:</span></td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td />
+                                                                <td><span class="text">Товаров:</span></td>
+                                                                <td><span class="text value">5</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-person"></span></td>
+                                                                <td><span class="text">Участников:</span></td>
+                                                                <td><span class="text value">25</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-person"></span></td>
+                                                                <td><span class="text">Наценка:</span></td>
+                                                                <td><span class="text value blue">12%</span></td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <div class="state">
+                                            <!-- Активная -->
+                                            <div class="active"></div>
+                                            <!-- В обработке (Стоп заказ) -->
+                                            <div></div>
+                                            <!-- К оплате -->
+                                            <div></div>
+                                            <!-- В доставке -->
+                                            <div></div>
+                                            <!-- Нужно забрать (Готовая) -->
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                    <div class="delimiter"></div>
+                                </div>
+                                <div class="right">
+                                    <div class="delimiter"></div>
+                                    
+                                    <!-- Кидсан/Экономка/Вика/закупка3-->
+                                    <div class="purchase-list-block">
+                                        <table>
+                                            <tr>
+                                                <td rowspan="2" class="logo">
+                                                    <div>
+                                                        <a class="image-zoom" href="#">
+                                                            <span>Увеличить</span>
+                                                        </a>
+                                                        <img alt="Сима" src="Image/закупка3.jpg"/>
+                                                    </div>
+                                                </td>
+                                                <td class="caption">
+                                                    <div>
+                                                        <table>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-cart"></span></td>
+                                                                <td><a class="text" href="#">Кидсан</a><a class="text" href="#">(1)</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-cart"></span></td>
+                                                                <td><a class="text" href="#">Экономка</a><a class="text" href="#">(Вика)</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-calculator"></span></td>
+                                                                <td><a class="text" href="#">Активная</a></td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                                <td class="action">
+                                                    <div>
+                                                        <span>Правила закупки</span>
+                                                        <span>Участники закупки</span>
+                                                        <span>Сообщения</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" class="info">
+                                                    <div>
+                                                        <table>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-calendar"></span></td>
+                                                                <td><span class="text">Период работы:</span></td>
+                                                                <td><span class="text value">c 13 марта 2014 по 20 марта 2014 (осталось 5 дней)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td />
+                                                                <td><span class="text">Товаров:</span></td>
+                                                                <td><span class="text value">5</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-person"></span></td>
+                                                                <td><span class="text">Участников:</span></td>
+                                                                <td><span class="text value">25</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-person"></span></td>
+                                                                <td><span class="text">Наценка:</span></td>
+                                                                <td><span class="text value blue">12%</span></td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <div class="state">
+                                            <!-- Активная -->
+                                            <div class="active"></div>
+                                            <!-- В обработке (Стоп заказ) -->
+                                            <div></div>
+                                            <!-- К оплате -->
+                                            <div></div>
+                                            <!-- В доставке -->
+                                            <div></div>
+                                            <!-- Нужно забрать (Готовая) -->
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                    <div class="delimiter"></div>
+                                </div>
+                            </div>
+                            <div class="purchase-list">
+                                <div class="purchase-list-title">
+                                    <span>В обработке</span>
+                                    <span class="count">(2)</span>
+                                </div>
+                                <div class="left">
+                                    <div class="delimiter"></div>
+                                    
+                                    <!-- Петровский/Экономка/Вика/закупка4/В обработке-->
+                                    <div class="purchase-list-block">
+                                        <table>
+                                            <tr>
+                                                <td rowspan="2" class="logo">
+                                                    <div>
+                                                        <a class="image-zoom" href="#">
+                                                            <span>Увеличить</span>
+                                                        </a>
+                                                        <img alt="Петровский" src="Image/закупка4.jpg"/>
+                                                    </div>
+                                                </td>
+                                                <td class="caption">
+                                                    <div>
+                                                        <table>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-cart"></span></td>
+                                                                <td><a class="text" href="#">Петровский</a><a class="text" href="#">(1)</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-cart"></span></td>
+                                                                <td><a class="text" href="#">Экономка</a><a class="text" href="#">(Вика)</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-calculator"></span></td>
+                                                                <td><a class="text" href="#">В обработке</a></td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                                <td class="action">
+                                                    <div>
+                                                        <span>Правила закупки</span>
+                                                        <span>Участники закупки</span>
+                                                        <span>Сообщения</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" class="info">
+                                                    <div>
+                                                        <table>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-calendar"></span></td>
+                                                                <td><span class="text">Период работы:</span></td>
+                                                                <td><span class="text value">c 13 марта 2014 по 20 марта 2014 (осталось 5 дней)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td />
+                                                                <td><span class="text">Товаров:</span></td>
+                                                                <td><span class="text value">5</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-person"></span></td>
+                                                                <td><span class="text">Участников:</span></td>
+                                                                <td><span class="text value">25</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-person"></span></td>
+                                                                <td><span class="text">Наценка:</span></td>
+                                                                <td><span class="text value blue">12%</span></td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <div class="state">
+                                            <!-- Активная -->
+                                            <div class="closed"></div>
+                                            <!-- В обработке (Стоп заказ) -->
+                                            <div class="active"></div>
+                                            <!-- К оплате -->
+                                            <div></div>
+                                            <!-- В доставке -->
+                                            <div></div>
+                                            <!-- Нужно забрать (Готовая) -->
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                    <div class="delimiter"></div>
+                                </div>
+                                <div class="right">
+                                    <div class="delimiter"></div>
+
+                                    <!-- OLD NAVY/Get Dressed/Ольга/закупка5/В обработке-->
+                                    <div class="purchase-list-block">
+                                        <table>
+                                            <tr>
+                                                <td rowspan="2" class="logo">
+                                                    <div>
+                                                        <a class="image-zoom" href="#">
+                                                            <span>Увеличить</span>
+                                                        </a>
+                                                        <img alt="OLD NAVY" src="Image/закупка5.jpg"/>
+                                                    </div>
+                                                </td>
+                                                <td class="caption">
+                                                    <div>
+                                                        <table>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-cart"></span></td>
+                                                                <td><a class="text" href="#">OLD NAVY</a><a class="text" href="#">(1)</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-cart"></span></td>
+                                                                <td><a class="text" href="#">Get Dressed</a><a class="text" href="#">(Ольга)</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-calculator"></span></td>
+                                                                <td><a class="text" href="#">В обработке</a></td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                                <td class="action">
+                                                    <div>
+                                                        <span>Правила закупки</span>
+                                                        <span>Участники закупки</span>
+                                                        <span>Сообщения</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" class="info">
+                                                    <div>
+                                                        <table>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-calendar"></span></td>
+                                                                <td><span class="text">Период работы:</span></td>
+                                                                <td><span class="text value">c 13 марта 2014 по 20 марта 2014 (осталось 5 дней)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td />
+                                                                <td><span class="text">Товаров:</span></td>
+                                                                <td><span class="text value">5</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-person"></span></td>
+                                                                <td><span class="text">Участников:</span></td>
+                                                                <td><span class="text value">25</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-person"></span></td>
+                                                                <td><span class="text">Наценка:</span></td>
+                                                                <td><span class="text value blue">12%</span></td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <div class="state">
+                                            <!-- Активная -->
+                                            <div class="closed"></div>
+                                            <!-- В обработке (Стоп заказ) -->
+                                            <div class="active"></div>
+                                            <!-- К оплате -->
+                                            <div></div>
+                                            <!-- В доставке -->
+                                            <div></div>
+                                            <!-- Нужно забрать (Готовая) -->
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                    <div class="delimiter"></div>
+                                </div>
+			                </div>
+                            <div class="purchase-list">
+                                <div class="purchase-list-title">
+                                    <span>К оплате</span>
+                                    <span class="count">(1)</span>
+                                </div>
+                                <div class="left">
+                                    <div class="delimiter"></div>
+                                    
+                                    <!-- Carters/Get Dressed/Ольга/закупка6/К оплате-->
+                                    <div class="purchase-list-block">
+                                        <table>
+                                            <tr>
+                                                <td rowspan="2" class="logo">
+                                                    <div>
+                                                        <a class="image-zoom" href="#">
+                                                            <span>Увеличить</span>
+                                                        </a>
+                                                        <img alt="Carters" src="Image/закупка6.jpg"/>
+                                                    </div>
+                                                </td>
+                                                <td class="caption">
+                                                    <div>
+                                                        <table>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-cart"></span></td>
+                                                                <td><a class="text" href="#">Carters</a><a class="text" href="#">(1)</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-cart"></span></td>
+                                                                <td><a class="text" href="#">Get Dressed</a><a class="text" href="#">(Ольга)</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-calculator"></span></td>
+                                                                <td><a class="text" href="#">К оплате</a></td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                                <td class="action">
+                                                    <div>
+                                                        <span>Правила закупки</span>
+                                                        <span>Участники закупки</span>
+                                                        <span>Сообщения</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" class="info">
+                                                    <div>
+                                                        <table>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-calendar"></span></td>
+                                                                <td><span class="text">Период работы:</span></td>
+                                                                <td><span class="text value">c 13 марта 2014 по 20 марта 2014 (осталось 5 дней)</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td />
+                                                                <td><span class="text">Товаров:</span></td>
+                                                                <td><span class="text value">5</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-person"></span></td>
+                                                                <td><span class="text">Участников:</span></td>
+                                                                <td><span class="text value">25</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><span class="ui-icon ui-icon-person"></span></td>
+                                                                <td><span class="text">Наценка:</span></td>
+                                                                <td><span class="text value blue">12%</span></td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <div class="state">
+                                            <!-- Активная -->
+                                            <div class="closed"></div>
+                                            <!-- В обработке (Стоп заказ) -->
+                                            <div class="closed"></div>
+                                            <!-- К оплате -->
+                                            <div class="active"></div>
+                                            <!-- В доставке -->
+                                            <div></div>
+                                            <!-- Нужно забрать (Готовая) -->
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                    <div class="delimiter"></div>
+                                </div>
+                                <div class="right">                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div id="purchases-2">
+                            Активные закупки - закупки в которые моно добавлять, удаляить товар или менять его количество
+                        </div>
+                        <div id="purchases-3">
+                            Закупки, которые находяться в обработке у продавца - ожидание подтвержедния
+                        </div>
+                        <div id="purchases-4">
+                            Подтвержденные закупки с выставленными счетами - необходимо оплатить!
+                        </div>
+                        <div id="purchases-5">
+                            Оплаченные закупки, осталось дождаться доставки в пункт выдачи.
+                        </div>
+                        <div id="purchases-6">
+                            Необходимо забрать из пункта выдачи
+                        </div>
+                        <div id="purchases-7">
+                            Всё завершённые закупки.
+                        </div>
+                    </div>
+                    
+                    <div id="fragment-3">
+                        Список магазинов
+                    </div>
+                    
+                    <!-- Мои новости -->
+                    <div id="main-news-menu" class="sub-menu">
+                        <!-- Новости от закупок и магазинов -->
+                        <ul>
+                            <li id="news-add-source-button"><a href="#news-add-source"><span class="ui-icon ui-icon-plusthick"></span></a></li>
+                            <li><a href="#news-purchase"><span>Уведомления</span></a></li>
+                            <li><a href="#news-shop"><span>Новости магазинов</span></a></li>
+                            <li><a href="#news-shop-1"><span></span><span>"Экономка"</span></a></li>
+                            <li><a href="#news-shop-2"><span></span><span>"Get Dressed"</span></a></li>
+                        </ul>
+                        <div id="news-purchase">
+                            Уведомления.
+                            Новости по текущим закупкам.
+                        </div>
+                        <div id="news-shop">
+                            Новости магазинов.
+                        </div>
+                        <div id="news-shop-1">
+                            Новости магазина "Экономка".
+                        </div>
+                        <div id="news-shop-2">
+                            Новости магазина "Get Dressed".
+                        </div>
+
+                        <!-- Add news source -->
+                        <div id="news-add-source" title="Basic dialog" style="display: none;">
+                            <div class="dialog-list-title">
+                                <span class="ui-icon-white ui-icon-plusthick"></span>
+                                <div><span>Разделы новостей</span></div>
+                            </div>
+                            <div class="dialog-list-content">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="fragment-5">
+                        <div class="sub-menu">
+                            <div>
+                                <div class="input_back_wrap no_select">
+                                    <div class="input_back" style="margin: 1px; padding: 4px 20px 5px;">
+                                        <div class="input_back_content">Поиск сообщений или собеседников</div>
+                                    </div>
+                                </div>
+                                <input type="text" value="" id="im_filter" class="text fl_l">
+                                <span class="input_reset ui-icon ui-icon ui-icon-closethick"></span>
+                            </div>
+                        </div>
+                        <div>
+                            Просмотр и отправка сообщений пользователям, продовцам, закупкам
+                        </div>
+                    </div>
+                    <div id="fragment-6">
+                        Настройки приложения
+                    </div>
+                </div>
+            </div>
+
+        </div>
+ 
+        <script>
+            $("#main-menu").tabs();
+
+            $("#main-purchases").tabs();
+
+            $("#main-news-menu").tabs({
+                beforeActivate: function(event, ui) {
+                    if ((ui) && (ui.newPanel) && (ui.newPanel.selector == "#news-add-source")) {
+                        $("#news-add-source").dialog({
+                            draggable: false,
+                            resizable: false,
+                            closeOnEscape: false,
+                            dialogClass: "dialog-list",
+                            appendTo: "#news-add-source-button",
+                            position: { my: "right top", at: "right top", of: "#news-add-source-button" },
+                            width: "auto",
+                            buttons: [],
+                        });
+                        return false;
+                    }
+                    return true;
+                }
+            });
+
+            //Инициалищзация fullness
+            var progressbar = $(".fullness");
+            $(".fullness").progressbar({ value: 40.0 });
+            
+            //Инициализируем все подсказки, показываемые (под элементом) снизу ("dialog-bottom-tooltip")
+            var dialogBottomTooltipMouseleave = function () {
+                var tooltipId = $(this).data("bottom-tooltip-id");
+                if (tooltipId) {
+                    var tooltip = $("#" + tooltipId);
+                    tooltip.dialog("close");
+                }
+            };
+            $(".dialog-bottom-tooltip").parent().mouseenter(
+                function () {
+                    var tooltipId = $(this).data("bottom-tooltip-id");
+                    if (!tooltipId) {
+                        var child = $(this).children(".dialog-bottom-tooltip");
+                        tooltipId = child[0].id;
+                        if (!tooltipId) {
+                            child.uniqueId();
+                            tooltipId = child[0].id;
+                        }
+                        $(this).data("bottom-tooltip-id", tooltipId);
+                    }
+                    var tooltip = $("#" + tooltipId);
+                    tooltip.dialog({
+                        draggable: false,
+                        resizable: false,
+                        closeOnEscape: true,
+                        dialogClass: "dialog-bottom-tooltip-container",
+                        position: { my: "left-34 top+2", at: "left bottom", of: $(this) },
+                        width: "auto",
+                        height: "auto",
+                        minHeight: "0",
+                        minWidth: "0",
+                        buttons: [],
+                        //show: { effect: "slide", direction: "down", duration: 100 },
+                        //hide: { effect: "slide", direction: "down", duration: 100 },
+                        //show: { effect: "fade", duration: 400 },
+                        //hide: { effect: "fade", duration: 200 },
+                    });
+                });
+            $(".dialog-bottom-tooltip").parent().mouseleave(dialogBottomTooltipMouseleave);
+
+            //Активируем закладку "main-purchases"
+            $('#main-menu a[href="#main-purchases"]').click();
+            
+            $('#main-news-menu a[href="#news-purchase"]').click();
+
+            //Все диалоги типа "dialog-list" закрываются при нажатии на заголовок
+            $(".dialog-list-title").click(function (e) {
+                var target = $(e.target);
+                var dialogItem = target.closest(".ui-dialog").children(".ui-dialog-content");
+                dialogItem.dialog("close");
+            });
+
+            //Инициализация контрола "поиск"
+            var inputControlId = "#im_filter";
+            $(inputControlId).prev().find(".input_back").click(
+                function () {
+                    $(inputControlId).focus();
+                });
+            $(inputControlId).next().mouseover(
+                function () {
+                    $(this).animate({
+                        opacity: 1.0,
+                    }, 10);
+                });
+            $(inputControlId).next().mouseout(
+                function () {
+                    $(this).animate({
+                        opacity: 0.5,
+                    }, 500);
+                });
+            $(inputControlId).next().click(
+                function () {
+                    var inputItem = $(this).prev();
+                    inputItem.val("");
+                    inputItem.focus();
+                    inputItem.trigger("input");
+                });
+            $(inputControlId).focus(
+                function () {
+                    var titleItem = $(this).prev().find(".input_back_content");
+                    titleItem.animate({
+                        color: "#C0C8D0",
+                    }, 500);
+                });
+            $(inputControlId).blur(function () {
+                var titleItem = $(this).prev().find(".input_back_content");
+                titleItem.animate({
+                    color: "#8C8E91",
+                }, 500);
+            });
+            $(inputControlId).on("input", function (e) {
+                var titleItem = $(this).prev().find(".input_back_content");
+                var resetItem = $(this).next();
+                var value = $(this).val();
+                if (value.length == 0) {
+                    titleItem.show();
+                    resetItem.css("display", "none");
+                } else {
+                    titleItem.hide();
+                    resetItem.css("display", "inline-block");
+                }
+            });
+            
+            //Инициализация всплывающего модуля "Увеличить" на картинках
+            $(".image-zoom").parent().mouseenter(
+                function () {
+                    $(this).find(".image-zoom").animate({
+                        marginTop: "106px",
+                    }, 300);
+                });
+            $(".image-zoom").parent().mouseleave(
+                function() {
+                    $(this).find(".image-zoom").animate({
+                        marginTop: "131px",
+                    }, 300);
+                });
+
+            //Закрываем диалоги стиля ".dialog-list" при нажатии мышкой вне диалога
+            $(document).on("click", function (e) {
+                var dialogItem = $(".ui-dialog").children(".ui-dialog-content");
+                var isDialogList = (dialogItem.length > 0) && (dialogItem.parent().is(".dialog-list"));
+                if (isDialogList) {
+                    var target = $(e.target);
+                    var isOpen = dialogItem.dialog("isOpen");
+                    if (isOpen) {
+                        var clickedOnDialog = target.closest(".ui-dialog").is(".dialog-list");
+                        if (!clickedOnDialog) {
+                            var appendTo = dialogItem.dialog("option", "appendTo");
+                            var clickedOnAppendTo = target.closest(appendTo).is(appendTo);
+                            if (!clickedOnAppendTo) {
+                                dialogItem.dialog("close");
+                            }
+                        }
+                    }
+                }
+            });
+
+        </script>
+
+    </body>
+</html>

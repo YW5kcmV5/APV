@@ -1,0 +1,49 @@
+﻿.input_back_wrap {
+    cursor: text;
+    position: relative;
+    z-index: 90;
+}
+
+.input_back {
+    color: #8C8E91;
+    position: absolute;
+    z-index: 90;
+}
+
+.no_select {
+    -moz-user-select: none;
+}
+
+.input_back_content {
+    line-height: normal;
+    padding: 0 2px;
+    white-space: nowrap;
+}
+
+.input_reset {
+    cursor: pointer;
+    display: none;
+    margin-left: -20px;
+    margin-top: 4px;
+    opacity: 0.5;
+    position: absolute;
+    z-index: 100;
+}
+
+#im_filter_out .input_back_content {
+    height: 15px;
+    line-height: 15px;
+}
+
+#im_filter {
+    background: url("../Image/magglass.png") no-repeat scroll 5px 6px #FFFFFF;
+    height: 15px;
+    line-height: 15px;
+    margin: 0;
+    padding: 4px 20px 5px;
+    width: 304px;
+}
+
+.fl_l {
+    float: left;
+}

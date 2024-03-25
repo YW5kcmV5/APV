@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5EFAA1DC-1393-4B6F-9ABD-1CF2D314554E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>APV.TransControl.Core</RootNamespace>
+    <AssemblyName>APV.TransControl.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\AnonymousUser.cs" />
+    <Compile Include="Application\AnonymousUserContext.cs" />
+    <Compile Include="Application\ConnectionSettings.cs" />
+    <Compile Include="Application\ContextManager.cs" />
+    <Compile Include="DataLayer\TransConverter.cs" />
+    <Compile Include="Entities\AddEquipment.cs" />
+    <Compile Include="Entities\AddEquipmentTemplate.cs" />
+    <Compile Include="Entities\AddEquipmentTemplateItem.cs" />
+    <Compile Include="DataLayer\DbManager.cs" />
+    <Compile Include="DataLayer\MonClientDataLayerManager.cs" />
+    <Compile Include="Entities\Collection\MonClientCollection.cs" />
+    <Compile Include="Entities\Collection\ObjDataCollection.cs" />
+    <Compile Include="Entities\Consumption\BaseConsumptionInfo.cs" />
+    <Compile Include="Entities\Consumption\ConsumptionInfo.cs" />
+    <Compile Include="Entities\Consumption\ConsumptionManager.cs" />
+    <Compile Include="Entities\Consumption\ConsumptionSettings.cs" />
+    <Compile Include="Entities\Consumption\FuelInterval.cs" />
+    <Compile Include="Entities\EverestMainData.cs" />
+    <Compile Include="Entities\FreqRecord.cs" />
+    <Compile Include="Entities\MonClientEntity.cs" />
+    <Compile Include="Entities\MonObj.cs" />
+    <Compile Include="Entities\MonPos.cs" />
+    <Compile Include="Entities\ObjData.cs" />
+    <Compile Include="Entities\ObjRecord.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BusinessLogic\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\APV\APV.Math.Diagrams\APV.Math.Diagrams.csproj">
+      <Project>{E8CED6CF-3455-4AB1-A3B2-1BEB3A7EB8E1}</Project>
+      <Name>APV.Math.Diagrams</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\APV\APV.DatabaseAccess\APV.DatabaseAccess.csproj">
+      <Project>{6551ECA7-2245-4817-BD33-5134509A2799}</Project>
+      <Name>APV.DatabaseAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\APV\APV.EntityFramework\APV.EntityFramework.csproj">
+      <Project>{2E0F252F-FADA-4D3D-99B8-67742DD1365A}</Project>
+      <Name>APV.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\APV\APV.Common\APV.Common.csproj">
+      <Project>{464E5897-E88C-4AA9-8B53-58F40D659158}</Project>
+      <Name>APV.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\APV.TransControl.Common\APV.TransControl.Common.csproj">
+      <Project>{EB280066-F001-4655-9C80-AC026B6766C8}</Project>
+      <Name>APV.TransControl.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Info\SYNCH_WL.WL_PROC.txt" />
+    <Content Include="Info\EVEREST_DBLINKS.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

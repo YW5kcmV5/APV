@@ -1,0 +1,39 @@
+﻿@using System.Web.Optimization
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html ng-app="AvtoligaApp">
+
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+        <meta name="viewport" content="width=device-width" />
+        <meta name="keywords" content="Запчасти, кузовные, оптика, иномарки, светодиодная, купить">
+        <meta name="description" content="Интернет-магазин кузовных запчастей и оптики для легковых иномарок">
+        <title>Купить кузовные запчасти для иномарок. Оптика для иномарок. Светодиодная оптика. | Avtoliga</title>
+        <link rel="Avtoliga icon" href="@Url.Content("~/Content/Images/favicon.ico")" type="image/x-icon">
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/angularjs")
+        @Scripts.Render("~/bundles/cufon-yui")
+        @Scripts.Render("~/bundles/avtoliga")
+        @Styles.Render("~/bundles/css")
+        <script type="text/javascript">
+            AvtoligaApp.SiteRoot = "@Url.Content("~/")";
+        </script>
+    </head>
+
+    <body>
+
+        @Html.Partial("~/Views/Header.cshtml")
+
+        @RenderBody()
+
+        @Html.Partial("~/Views/Footer.cshtml")
+
+        @Html.Partial("~/Views/Gallery.cshtml")
+
+    </body>
+
+</html>

@@ -1,0 +1,88 @@
+﻿@using APV.Avtoliga.UI.Web
+@using APV.Avtoliga.UI.Web.Models.Entities
+@using APV.Avtoliga.UI.Web.Models;
+
+@model SearchModel
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Layout.cshtml";
+}
+
+<div class="b-body">
+    
+    @if (Model.ProductsInited)
+    {
+        <h1>Кузовные запчасти и оптика для @Model.Model.Trademark.Name @Model.Model.Name (@Model.Model.Period)</h1>
+
+        <div class="b-help">
+        </div>
+
+        @Html.Partial("~/Views/SearchMenu.cshtml", @Model.ToSeachMenu())
+
+        if ((Model.Products != null) && (Model.Products.Length > 0))
+        {
+            <table class="catalog">
+            
+                <tbody>
+                
+                    <tr class="header">
+                        <th class="photo">Фото</th>
+                        <th class="title">Наименование</th>
+                        <th class="year sortable numeric">
+                        <th class="price">Цена</th>
+                        <th class="delivery">Доставка</th>
+                        <th class="basket">Наличие</th>
+                    </tr>
+                
+                    @foreach (ProductInfo productInfo in Model.Products)
+                    {
+                        <tr @(@productInfo.OutOfStock ? Html.Raw("class=\"no-store1\"") : null)>
+                            <td class="photo">
+                                <a href="@productInfo.LogoUrl" rel="lightbox" onclick="javascript:AvtoligaApp.ShowGallery('@productInfo.ImageUrls.ToJsonString()', true);return false;">
+                                    <img title="@productInfo.Name" alt="@productInfo.Name" src="@productInfo.LogoUrl">
+                                </a>
+                            </td>
+                            <td class="title">
+                                <a href="@productInfo.Url">@productInfo.Name</a>
+                            </td>
+                            <td class="year">@productInfo.Period</td>
+                            <td class="price">
+                                @productInfo.Cost
+                                <span class="ruble">руб.</span>
+                            </td>
+                            <td class="delivery">
+                                @if (!@productInfo.OutOfStock)
+                                {
+                                    @productInfo.DeliveryTime
+                                }
+                            </td>
+                            <td class="basket">
+                                @if (!@productInfo.OutOfStock)
+                                {
+                                    <button class="list-quick-order" type="button">Заказать</button>
+                                }
+                                else
+                                {
+                                    @:нет
+                                }
+                            </td>
+                        </tr>
+                    }
+                
+                </tbody>
+
+            </table>
+        }
+        else
+        {
+            <p class="catalog-message">Не найдено ни одной детали</p>
+        }
+    }
+    else
+    {
+
+        @Html.Partial("~/Views/SearchMenu.cshtml", @Model.ToSeachMenu())
+
+    }
+
+</div>

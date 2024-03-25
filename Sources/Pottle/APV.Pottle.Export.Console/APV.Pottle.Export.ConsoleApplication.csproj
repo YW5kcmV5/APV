@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{265CCD74-0C8A-42FC-B125-96071475E315}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>APV.Pottle.Export.ConsoleApplication</RootNamespace>
+    <AssemblyName>APV.Pottle.Export.ConsoleApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseExporter.cs" />
+    <Compile Include="TrademarkExporter.cs" />
+    <Compile Include="CountryExporter.cs" />
+    <Compile Include="SupplierExporter.cs" />
+    <Compile Include="CompanyExporter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\APV\APV.EntityFramework\APV.EntityFramework.csproj">
+      <Project>{2E0F252F-FADA-4D3D-99B8-67742DD1365A}</Project>
+      <Name>APV.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\APV\APV.Common\APV.Common.csproj">
+      <Project>{464E5897-E88C-4AA9-8B53-58F40D659158}</Project>
+      <Name>APV.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\APV.Pottle.Common\APV.Pottle.Common.csproj">
+      <Project>{3F10F16C-DDF5-4DBE-AC2C-D8C4F9DCFD76}</Project>
+      <Name>APV.Pottle.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\APV.Pottle.Core\APV.Pottle.Core.csproj">
+      <Project>{6A2A03A1-0249-4F33-9B35-319074387317}</Project>
+      <Name>APV.Pottle.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\APV.Pottle.Toolkit\APV.Pottle.Toolkit.csproj">
+      <Project>{5b01518b-b08b-481a-91f0-0ee21154643b}</Project>
+      <Name>APV.Pottle.Toolkit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\APV.Pottle.WebParsers\APV.Pottle.WebParsers.csproj">
+      <Project>{9A902BA1-44B6-44B5-8704-A608F280084B}</Project>
+      <Name>APV.Pottle.WebParsers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

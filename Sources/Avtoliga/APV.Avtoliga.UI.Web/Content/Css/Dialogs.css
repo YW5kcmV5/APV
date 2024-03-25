@@ -1,0 +1,241 @@
+﻿/* ==========================================================================
+    alarm modal window
+   ========================================================================== */
+
+.alarm
+{
+    margin: 0;
+    max-width: 650px;
+    min-width: 300px;
+    background-color: #fff;
+    border: 1px solid #e1e1e8;
+    border-radius: 6px;
+    padding: 9px 14px;
+}
+
+    .alarm > .alarm-body {
+        display: block;
+        text-align: left;
+        background-color: #eaeaea;
+        border-radius: 6px;
+        margin: 10px 0;
+        padding: 15px 30px 15px 15px;
+    }
+
+        .alarm > .alarm-body > h4
+        {
+            color: #616161;
+            text-shadow: 0 2px 1px #fff;
+            font-size: 19px;
+            font-weight: 400;
+            padding: 0;
+            margin: 0 0 10px;
+        }
+
+        .alarm > .alarm-body > label
+        {
+            color: #646464;
+        }
+
+        .alarm > .alarm-body.alarm-error
+        {
+            background-color: #fcf2f2;
+            border-color: #dfb5b4;
+        }
+
+    .alarm > .alarm-footer
+    {
+        display: block;
+        text-align: right;
+    }
+
+        .alarm > .alarm-footer > input
+        {
+            display: inline-block;
+            padding: 6px 12px;
+            line-height: 1.42857;
+            font-size: 14px;
+            font-weight: bold;
+            color: #fff;
+            border: 1px solid #b61b18;
+            background-color: #fe6e6e;
+            text-align: center;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+            border-radius: 6px;
+            margin-left: 10px;
+        }
+
+            .alarm > .alarm-footer > input:hover {
+            }
+
+            .alarm > .alarm-footer > input.submit
+            {
+                background-color: #fd3d3d;
+            }
+
+                .alarm > .alarm-footer > input.submit:hover
+                {
+                }
+
+/* ==========================================================================
+    confirm
+    Modifiers:
+        - "error" (div)
+   ========================================================================== */
+
+.confirm
+{
+    margin: 0;
+    max-width: 650px;
+    min-width: 300px;
+    background-color: #fff;
+    border: 1px solid #e1e1e8;
+    border-radius: 6px;
+    padding: 9px 14px;
+}
+
+    .confirm > .confirm-body {
+        display: block;
+        text-align: left;
+        background-color: #eaeaea;
+        border-radius: 6px;
+        margin: 10px 0;
+        padding: 15px 30px 15px 15px;
+    }
+
+        .confirm > .confirm-body > h4
+        {
+            color: #616161;
+            text-shadow: 0 2px 1px #fff;
+            font-size: 19px;
+            font-weight: 400;
+            padding: 0;
+            margin: 0 0 10px;
+        }
+
+        .confirm > .confirm-body > label
+        {
+            color: #646464;
+        }
+
+    .confirm > .confirm-footer
+    {
+        display: block;
+        text-align: right;
+    }
+
+        .confirm > .confirm-footer > input {
+            display: inline-block;
+            padding: 6px 12px;
+            line-height: 1.42857;
+            font-size: 14px;
+            font-weight: bold;
+            color: #fff;
+            border: 1px solid #b61b18;
+            background-color: #fe6e6e;
+            text-align: center;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+            border-radius: 6px;
+            margin-left: 10px;
+        }
+
+            .confirm > .confirm-footer > input:hover {
+            }
+
+            .confirm > .confirm-footer > input.submit {
+                background-color: #fd3d3d;
+            }
+
+                .confirm > .confirm-footer > input.submit:hover
+                {
+                }
+
+    .confirm > .confirm-body.form > label
+    {
+        color: #646464;
+        display: inline-block;
+        height: 18px;
+        margin-bottom: 11px;
+        margin-right: 22px;
+        padding-top: 6px;
+        position: relative;
+        text-align: right;
+        vertical-align: top;
+        width: 134px;
+    }
+
+        .confirm > .confirm-body.form > label > sup
+        {
+            color: #f00;
+            font-size: 100%;
+            position: absolute;
+            right: -0.5em;
+            top: 0;
+            vertical-align: baseline;
+        }
+
+    .confirm > .confirm-body.form > input
+    {
+        height: 20px;
+        margin-bottom: 11px;
+        padding: 2px 3px;
+        width: 353px;
+    }
+
+/* ==========================================================================
+    Flayout
+    Modifiers:
+        - "error" (div)
+   ========================================================================== */
+
+div.flyout
+{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    padding: 20px;
+    min-width: 360px;
+    background-color: #1c8fb4;
+    border-radius: 6px;
+    color: white;
+}
+
+    div.flyout.error
+    {
+        background-color: #b61b18;
+    }
+
+    div.flyout > span
+    {
+        display: block;
+        cursor: default;
+    }
+
+        div.flyout > span:nth-child(1)
+        {
+            cursor: pointer;
+            font-size: 14pt;
+            line-height: 12pt;
+            position: absolute;
+            right: 4pt;
+            top: 1pt;
+        }
+
+            div.flyout > span:nth-child(1):hover
+            {
+                color: #e5e5e5;
+            }
+
+        div.flyout > span:nth-child(2)
+        {
+            font-size: 24pt;
+            text-transform: capitalize;
+        }
+
+        div.flyout > span:nth-child(3)
+        {
+            margin-top: 10px;
+            font-size: 14pt;
+        }

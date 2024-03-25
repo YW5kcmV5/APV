@@ -1,0 +1,215 @@
+﻿@using APV.Avtoliga.Common
+@using APV.Avtoliga.UI.Web.Models;
+@using APV.Avtoliga.UI.Web.Models.Entities
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout.cshtml";
+}
+@model MainModel
+
+<div class="b-body">
+
+    <div class="@((Model.Type == HelpType.None) ? "b-faq" : "b-help_page")">
+
+        <ul class="menu">
+            <li @Html.Raw((Model.Type == HelpType.HowToOrder) ? "class=\"active\"" : "")>
+                <a href="@Url.Action("Index", "Home", new { type = "how_to_order" })">Как заказать?</a>
+            </li>
+            <li @Html.Raw((Model.Type == HelpType.Guarantee) ? "class=\"active\"" : "")>
+                <a href="@Url.Action("Index", "Home", new { type = "guarantee" })">Оплата и гарантии</a>
+            </li>
+            <li @Html.Raw((Model.Type == HelpType.Delivery) ? "class=\"active\"" : "")>
+                <a href="@Url.Action("Index", "Home", new { type = "delivery" })">Доставка заказа</a>
+            </li>
+            <li @Html.Raw((Model.Type == HelpType.Back) ? "class=\"active\"" : "")>
+                <a href="@Url.Action("Index", "Home", new { type = "back" })">Возврат деталей</a>
+            </li>
+        </ul>
+
+        @if (Model.Type == HelpType.None)
+        {
+            
+            <ul class="content">
+
+                <li class="active">
+
+                    <h1>Кузовные запчасти и оптика для иномарок</h1>
+
+                    <p>
+                        Мы рады приветствовать Вас на сайте компании Автолига!
+                            В нашем интернет магазине имеется широкий выбор тайваньских и итальянских кузовных запчастей и оптики для иномарок, в том числе светодиодной оптики.
+                            <br>
+                    </p>
+
+                    <p>
+                        Мы гарантируем качество всей продукции, представленной в каталоге, а цены на предлагаемые нами кузовные запчасти и оптику для иномарок на порядок ниже цен на оригинальные запчасти,
+                            при этом качество и визуальная привлекательность находятся на том же, или даже более высоком уровне!
+                            Не тратьте время на долгие поиски &ndash;
+                            Вы можете купить кузовные запчасти и оптику для иномарок уже сегодня!
+                    </p>
+
+                    <ul class="last-messages">
+
+                        <li class="response">
+                            @if (Model.LastFeedback != null)
+                            {
+                                <p>@Model.LastFeedback.Text</p>
+                                <div class="author">&mdash; @Model.LastFeedback.Name&hellip; @Model.LastFeedback.CreatedAt</div>
+                                <a href="@Url.Action("Feedbacks", "Home")" class="all">Все отзывы</a>
+                            }
+                            else
+                            {
+                                <p><i>Нет отзывов. Будьте первым!</i></p>
+                                <div class="author"></div>
+                                <a href="@Url.Action("Feedbacks", "Home")" class="all">Все отзывы</a>
+                            }
+                        </li>
+                        
+                        @if (Model.LastNews != null)
+                        {
+                            <li class="news">
+                                
+                                @if (Model.LastNews.LogoUrl != null)
+                                {
+                                    <img alt="@Model.LastNews.Caption" src="@Model.LastNews.LogoUrl" />
+                                }
+                                
+                                <p>
+                                    <strong>@Model.LastNews.Caption</strong>
+                                    <br />
+                                    @Model.LastNews.Text
+                                </p>
+
+                                <div class="author">&mdash; @Model.LastNews.CreatedAt</div>
+                                <a href="@Url.Action("News", "Home")" class="all">Все новости</a>
+
+                            </li>
+                        }
+                    </ul>
+
+                </li>
+
+            </ul>
+
+            <div role="ui-slideshow" class="banner">
+
+                <!--
+                
+                  <ul role="ui-slideshow-slides" class="images">
+                      <li class="current" style="left: 0px; top: 0px; transition-property: all; transition-duration: 0s; transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);">
+                          <object width="309" height="100" align="middle" id="obj457" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000">
+                              <param value="sameDomain" name="allowScriptAccess">
+                              <param value="false" name="allowFullScreen">
+                              <param value="opaque" name="wmode">
+                              <param value="/i/00.swf" name="movie">
+                              <param value="high" name="quality">
+                              <param value="#ffffff" name="bgcolor">
+                              <embed width="309" height="100" align="middle" wmode="opaque" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" allowfullscreen="false" allowscriptaccess="sameDomain" name="obj457" bgcolor="#ffffff" quality="high" src="/i/00.swf">
+                          </object>
+                      </li>
+                      <li class="" style="left: -309px; top: 0; transition-property: all; transition-duration: 0s; transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);">
+                          <a href="/producers/1.html">
+                              <img title="Depo" alt="Depo" src="/files/promo/depo.jpg">
+                          </a>
+                      </li>
+                      <li class="" style="left: -309px; top: 0; transition-property: all; transition-duration: 0s; transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);">
+                          <a href="/producers/2.html">
+                              <img title="Sonar" alt="Sonar" src="/files/promo/sonar.jpg">
+                          </a>
+                      </li>
+                  </ul>
+                  <ul role="ui-slideshow-points" class="points">
+                      <li class="current"></li>
+                      <li class=""></li>
+                      <li class=""></li>
+                  </ul>
+                  -->
+
+            </div>
+            
+        }
+
+        @if (Model.Type == HelpType.HowToOrder)
+        {
+            <div class="b-content">
+                <h1>Как заказать</h1>
+                <p>Если вам нужно заменить оптику или кузовную деталь автомобиля, вы обратились по адресу. У нас вы найдёте запчасти итальянского и тайваньского производства для иномарок из Америки, Европы и Азии. Мы гарантируем качество продукции, представленной в нашем каталоге, а наши цены на автозапчасти вас приятно удивят.</p>
+                <p>Заказать необходимую деталь в нашем интернет-магазине можно несколькими способами.</p>
+                <p>Вы можете самостоятельно ознакомиться с имеющимся на сайте каталогом, выбрать то, что вам нужно и сделать заказ по телефону.</p>
+                <p>
+                    Вы можете, не тратя времени на самостоятельные поиски, обратиться непосредственно к нашему менеджеру по телефону.<br>
+                </p>
+                <p>Вы можете <a href="@Url.Action("Feedback", "Home")">заполнить заявку</a> на нашем сайте и указать в ней марку, модель вашего автомобиля, а также название необходимой вам детали. Наши менеджеры сами Вам перезвонят.</p>
+                <p>Кроме того, связавшись с нашим специалистом по телефону, вы можете получить помощь в поиске товара и бесплатную консультацию по его приобретению, оплате, доставке и эксплуатации.</p>
+                <p>Внимание! На сайте имеются спецпредложения. Возможно, это то, что вы ищете.</p>
+            </div>
+        }
+
+        @if (Model.Type == HelpType.Guarantee)
+        {
+            <div class="b-content">
+                <h1>Оплата и&nbsp;гарантии</h1>
+                <p>Заказывая нужную деталь в нашем магазине, вы можете выбрать удобный для вас способ оплаты вашей покупки. Мы гарантируем вам высокое качество товара, доброжелательное отношение и современный уровень сервиса.</p>
+                <p>Любую из представленных в наших каталогах автозапчастей клиенты магазина могут оплатить наличными деньгами или по безналичному расчёту.</p>
+                <p>Наличными могут оплатить свою покупку в Avtoliga клиенты, проживающие в Санкт-Петербурге. В этом случае возможны доставка курьером или самовывоз. Соответственно, деньги передаются покупателем курьеру при доставке или вносятся лично в пункте выдачи заказа. На детали со сроком доставки 7 дней принимаются заказы от 3000 руб., после предоплаты. В случаях, когда срок доставки 1 день - предоплата не требуется.</p>
+                <p>Безналичный способ оплаты применяется в нашем магазине при расчётах с клиентами из других регионов России. От иногородних покупателей принимаются заказы на сумму от 5000 руб., со 100% предоплатой. Детали оплаты по безналичному расчёту оговариваются с каждым клиентом в индивидуальном порядке.</p>
+            </div>
+        }
+
+        @if (Model.Type == HelpType.Delivery)
+        {
+            <div class="b-content">
+                <h1>Доставка заказа</h1>
+                <p>Любой товар, представленный в каталоге нашего сайта, после оплаты можно получить лично в пункте выдачи заказа или заказать его с доставкой на дом. В случае самовывоза (для граждан, проживающих в Санкт-Петербурге) дополнительная плата не взимается.</p>
+                <p><strong>Доставка по Санкт-Петербургу</strong>. Товар доставляется заказчику обычно в течение дня. Сроки возможной доставки деталей указаны на сайте. Стоимость доставки в пределах КАД составляет 350 рублей.</p>
+                <p><u>Доставка запчастей с указанным в каталоге сроком 7 дней возможна только при заказе на сумму от 5000 руб. и после 100% предоплаты. Если сумма заказа меньше, то срок поставки может увеличится.</u>&nbsp;</p>
+                <p><strong>Доставку в регионы России</strong> мы осуществляем с помощью наших партнёров &ndash; транспортных компаний ПЭК, Деловые линии, EMS. Взимается 100% предоплата. Услуги транспортной компании в стоимость товара не входят, их клиент оплачивает самостоятельно при получении заказа.</p>
+                <p>Мы доставим нужную вам запчасть в любую точку России.</p>
+            </div>
+        }
+
+        @if (Model.Type == HelpType.Back)
+        {
+            <div class="b-content">
+                <h1>Возврат деталей</h1>
+                <p>Возврат приобретённой у нас детали осуществляется в течение 14 дней с момента покупки. Вы можете вернуть или обменять исправный товар, если он не был повреждён после покупки; не устанавливался на автомобиль;  в случае ошибки при оформлении товара магазином или при выдаче его со склада; в случае проблем с технической документацией; в случае явного брака производителя, подтверждённого документально.</p>
+                <p>Для оформления возврата такого товара следует представить документ, подтверждающий факт приобретения автозапчасти в нашем магазине. Другие документы оговариваются в каждом случае индивидуально.</p>
+                <p>Возврат осуществляется только по предварительному согласованию с менеджером магазина.</p>
+                <p>На дом к заказчику, для осмотра повреждённой детали, наши специалисты не выезжают. Запчасти со следами износа, устанавливавшиеся на автомобиль клиента, повреждённые в ходе эксплуатации или неаккуратного обращения (следы ДТП, царапины, вмятины, сколы и т.д.), возврату и обмену не подлежат. Мы просим вас проверять качество товара в момент получения заказа.</p>
+            </div>
+        }
+
+    </div>
+
+    @if (Model.Type == HelpType.None)
+    {
+        @Html.Partial("~/Views/SearchMenu.cshtml", @Model.ToSeachMenu())
+
+        if (Model.LastArticles != null)
+        {
+            <div class="b-fresh-articles">
+                <h2>Свежие статьи</h2>
+                <ul>
+                    @foreach (ArticleInfo articleInfo in Model.LastArticles)
+                    {
+                        <li>
+                            <a href="@articleInfo.Url">
+                                @if (articleInfo.ArticleGroup != null)
+                                {
+                                    <h3>@articleInfo.ArticleGroup.Name</h3>
+                                }
+                                else
+                                {
+                                    <h3>&nbsp;</h3>
+                                }
+                                <div class="date">@articleInfo.CreatedAt.ToShortDateString()</div>
+                                <p>@articleInfo.Name</p>
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        }
+    }
+
+</div>

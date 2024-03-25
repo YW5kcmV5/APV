@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0512C845-A522-4BF8-BE03-9589DBE3BFEE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>APV.Avtoliga.Core</RootNamespace>
+    <AssemblyName>APV.Avtoliga.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\Admin.cs" />
+    <Compile Include="Application\ContextManager.cs" />
+    <Compile Include="Application\Anonymous.cs" />
+    <Compile Include="Application\SessionManager.cs" />
+    <Compile Include="Application\UserContext.cs" />
+    <Compile Include="BusinessLogic\BaseManagement.cs" />
+    <Compile Include="BusinessLogic\ArticleManagement.cs" />
+    <Compile Include="BusinessLogic\ArticleGroupManagement.cs" />
+    <Compile Include="BusinessLogic\CookiesManager.cs" />
+    <Compile Include="BusinessLogic\UserManagement.cs" />
+    <Compile Include="BusinessLogic\FeedbackManagement.cs" />
+    <Compile Include="BusinessLogic\NewsManagement.cs" />
+    <Compile Include="BusinessLogic\ProductManagement.cs" />
+    <Compile Include="BusinessLogic\ModelManagement.cs" />
+    <Compile Include="BusinessLogic\ProducerManagement.cs" />
+    <Compile Include="BusinessLogic\ProductGroupManagement.cs" />
+    <Compile Include="BusinessLogic\Extensions\ImageManagementExtensions.cs" />
+    <Compile Include="BusinessLogic\Extensions\UrlManagementExtensions.cs" />
+    <Compile Include="BusinessLogic\FileManagement.cs" />
+    <Compile Include="BusinessLogic\ImageManagement.cs" />
+    <Compile Include="BusinessLogic\TrademarkManagement.cs" />
+    <Compile Include="BusinessLogic\UrlManagement.cs" />
+    <Compile Include="DataLayer\ArticleDataLayerManager.cs" />
+    <Compile Include="DataLayer\ArticleGroupDataLayerManager.cs" />
+    <Compile Include="DataLayer\UserDataLayerManager.cs" />
+    <Compile Include="DataLayer\FeedbackDataLayerManager.cs" />
+    <Compile Include="DataLayer\NewsDataLayerManager.cs" />
+    <Compile Include="DataLayer\TrademarkDataLayerManager.cs" />
+    <Compile Include="DataLayer\ModelDataLayerManager.cs" />
+    <Compile Include="DataLayer\ProductDataLayerManager.cs" />
+    <Compile Include="DataLayer\ProducerDataLayerManager.cs" />
+    <Compile Include="DataLayer\ProductGroupDataLayerManager.cs" />
+    <Compile Include="DataLayer\FileDataLayerManager.cs" />
+    <Compile Include="DataLayer\ImageDataLayerManager.cs" />
+    <Compile Include="DataLayer\UrlDataLayerManager.cs" />
+    <Compile Include="Entities\Collection\ArticleCollection.cs" />
+    <Compile Include="Entities\Collection\ArticleGroupCollection.cs" />
+    <Compile Include="Entities\Collection\UserCollection.cs" />
+    <Compile Include="Entities\Collection\FeedbackCollection.cs" />
+    <Compile Include="Entities\Collection\NewsCollection.cs" />
+    <Compile Include="Entities\Collection\ProductCollection.cs" />
+    <Compile Include="Entities\Collection\ProductGroupCollection.cs" />
+    <Compile Include="Entities\Collection\ProducerCollection.cs" />
+    <Compile Include="Entities\Collection\ModelCollection.cs" />
+    <Compile Include="Entities\Collection\FileCollection.cs" />
+    <Compile Include="Entities\Collection\ImageCollection.cs" />
+    <Compile Include="Entities\Collection\TrademarkCollection.cs" />
+    <Compile Include="Entities\Collection\UrlCollection.cs" />
+    <Compile Include="Entities\ArticleEntity.cs" />
+    <Compile Include="Entities\ArticleGroupEntity.cs" />
+    <Compile Include="Entities\UserEntity.cs" />
+    <Compile Include="Entities\FeedbackEntity.cs" />
+    <Compile Include="Entities\NewsEntity.cs" />
+    <Compile Include="Entities\ProductEntity.cs" />
+    <Compile Include="Entities\ProductGroupEntity.cs" />
+    <Compile Include="Entities\ProducerEntity.cs" />
+    <Compile Include="Entities\ModelEntity.cs" />
+    <Compile Include="Entities\FileEntity.cs" />
+    <Compile Include="Entities\ImageEntity.cs" />
+    <Compile Include="Entities\TrademarkEntity.cs" />
+    <Compile Include="Entities\UrlEntity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\APV\APV.EntityFramework\APV.EntityFramework.csproj">
+      <Project>{2E0F252F-FADA-4D3D-99B8-67742DD1365A}</Project>
+      <Name>APV.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\APV\APV.Common\APV.Common.csproj">
+      <Project>{464E5897-E88C-4AA9-8B53-58F40D659158}</Project>
+      <Name>APV.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\APV\APV.GraphicsLibrary\APV.GraphicsLibrary.csproj">
+      <Project>{FC6B973C-89D2-421A-A2C7-76901DDEFD66}</Project>
+      <Name>APV.GraphicsLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\APV.Avtoliga.Common\APV.Avtoliga.Common.csproj">
+      <Project>{451EC549-9D6A-4286-9616-E99038377099}</Project>
+      <Name>APV.Avtoliga.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

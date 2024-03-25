@@ -1,0 +1,65 @@
+﻿@using APV.Avtoliga.UI.Web.Models.Entities
+
+@{
+    var mainMenu = MenuInfo.MainMenu;
+}
+
+<div class="b-header">
+
+    <a class="logo" href="~/">
+        <img alt="Avtoliga" src="@Url.Content("~/Content/Images/header_logo.png")">
+    </a>
+
+    <div class="b-basket">
+        <div class="time">
+            Приём заказов с 10
+            <sup>00</sup>
+            до 19
+            <sup>00</sup>
+            <br>
+            и с 11
+            <sup>00</sup>
+            до 18
+            <sup>00</sup>
+            по выходным
+        </div>
+        <span class="phone">
+            <span class="code">(812)</span>
+            4567-023
+        </span>
+        <a onclick="yaCounter419840.reachGoal('FEEDBACK'); return true;" href="/feedback/">Обратная связь</a>
+        <p class="delivery">
+            Доставка по Санкт-Петербургу — 500
+            <span class="ruble">руб.</span>
+        </p>
+        <div class="social">
+        </div>
+    </div>
+
+    <!-- Main Menu -->
+    <ul class="menu">
+
+        @foreach (MenuInfo menuItem in mainMenu)
+        {
+            <li>
+                <a href="@menuItem.AbsoluteUrl">@menuItem.Title</a>
+                @if (menuItem.Items != null)
+                {
+                    <ul>
+                        @foreach (MenuInfo subMenuItem in menuItem.Items)
+                        {
+                            <li>
+                                <a href="@subMenuItem.AbsoluteUrl">@subMenuItem.Title</a>
+                            </li>
+                        }
+                    </ul>
+                }
+            </li>
+        }
+        <li class="login">
+            <a></a>
+        </li>
+
+    </ul>
+
+</div>

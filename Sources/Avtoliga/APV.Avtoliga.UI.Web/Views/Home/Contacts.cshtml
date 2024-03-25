@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Contacts";
+    Layout = "~/Views/Layout.cshtml";
+}
+
+<div class="b-body">
+
+    <h1>Контактная информация</h1>
+
+    <div class="map">
+        <iframe width="600" height="450" frameborder="0" style="border: 0"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4011.5468728660794!2d30.372971086199946!3d59.81968364018465!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696250577607d89%3A0x7e4d9b68b49a8192!2z0JwtNDYsINCx0LjQt9C90LXRgS3RhtC10L3RgtGA!5e0!3m2!1sru!2sru!4v1424093278507"></iframe>
+    </div>
+
+    <div class="contacts">
+        <h2>
+            <img alt="Автолига" src="/Image/contacts_logo.jpg">
+        </h2>
+        <hr>
+        <address>
+            <p>
+                <span class="title">Адрес:</span>
+                Санкт-Петербург,
+                <br>
+                Московское шоссе, д.46, офис 110а 
+            </p>
+            <p>
+                <span class="title">Режим:</span>
+                Пн-Пт, с 10:00 до 19:00
+                <br>
+                Сб-Вс, с 11:00 до 18:00
+            </p>
+            <p>
+                <span class="title">Телефон:</span>
+                + 7 911 971 43 51
+                <br>
+                + 7 900 646 25 81
+            </p>
+            <p>
+                <span class="title">Эл. почта:</span>
+                <a href="mailto:info@avtoliga24.ru">info@avtoliga24.ru</a>
+            </p>
+            <p>
+                <span class="title">Skype:</span>
+                <a href="skype:avtoliga?call">avtoliga</a>
+            </p>
+            <p>
+                <span class="title">Вконтакте:</span>
+                <a href="http://vk.com/avtoligaspb" target="_blank">vk.com/avtoligaspb</a>
+            </p>
+            <p>
+                <a href="@Url.Action("Feedback", "Home")">Обратная связь</a>
+            </p>
+        </address>
+
+    </div>
+
+</div>

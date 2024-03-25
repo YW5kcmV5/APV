@@ -1,0 +1,174 @@
+﻿<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>Корзинка</title>
+        <!-- Links -->
+        <link rel="stylesheet" href="css/common.css" />
+        <link rel="stylesheet" href="css/main-theme/jquery.ui.all.css" />
+        <link rel="stylesheet" href="css/main-menu.css" />
+        <link rel="stylesheet" href="css/sub-menu.css" />
+        <!-- Scripts -->
+        <script src="Js/jquery-1.10.2.js"></script>
+        <script src="Js/jquery-ui-1.10.4.main.js"></script>
+    </head>
+    <body>
+        
+        <div id="page_layout">
+            
+            <div id="page_header">
+                <div id="top_nav" class="head_nav">
+                    <table cellspacing="0" cellpadding="0" id="top_links">
+                        <tbody>
+                            <tr>
+                                <td><div id="head_small_logo" /></td>
+                                <td><div id="head_small_title" /></td>
+                                <td id="head_empty"></td>
+                                <td><a id="head_rules" class="top_nav_link">правила</a></td>
+                                <td><a id="head_help" class="top_nav_link">помощь</a></td>
+                                <td><a id="head_exit" class="top_nav_link">выйти</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div id="page_logo">
+                <div id="logo_left_panel">
+                    <img id="image_logo" src="Image/Logo.png" alt="Лого" />
+                    <img id="image_title" src="Image/Title.png" alt="Корзинка" width="248" height="65" />
+                </div>
+                <div id="logo_right_panel" class="ui-widget ui-widget-content ui-corner-all">
+                    <div class="info-panel-left">
+			<table>
+				<tr>
+					<td colspan="3">
+						<span>Закупки:</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="ui-icon ui-icon-cart"></span>
+					</td>
+					<td>
+		                                <span>активных:</span>
+					</td>
+					<td>
+                                		<span class="info-panel-count">5</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="ui-icon ui-icon-calculator"></span>
+					</td>
+					<td>
+		                                <span>оплата:</span>
+					</td>
+					<td>
+                                		<span class="info-panel-count">3</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="ui-icon ui-icon-contact"></span>
+					</td>
+					<td>
+		                                <span>доставка:</span>
+					</td>
+					<td>
+                                		<span class="info-panel-count">2</span>
+					</td>
+				</tr>
+			</table>
+                    </div>
+                    <div class="info-panel-right">
+                        <a class="info-panel-ref">
+                            <span class="ui-icon ui-icon-mail-closed"></span>
+                            <div>
+                                <span class="info-panel-count">5</span>
+                                <span>сообщений </span>
+                            </div>
+                        </a> 
+                        <a class="info-panel-ref">
+                            <span class="ui-icon ui-icon-flag"></span>
+                            <div>
+                                <span class="info-panel-count">7</span>
+                                <span>уведомлений </span>
+                            </div>
+                        </a> 
+                        <a class="info-panel-ref">
+                            <span class="ui-icon ui-icon-person"></span>
+                            <div>
+                                <span class="info-panel-count">13</span>
+                                <span>друзей </span>
+                            </div>
+                        </a> 
+                    </div>
+                </div>
+            </div>
+            
+            <div id="page_content">
+                <div id="main-menu">
+                    <ul>
+                        <li><a href="#fragment-1"><span>Моя страница</span></a></li>
+                        <li><a href="#fragment-2"><span>Мои закупки</span></a></li>
+                        <li><a href="#fragment-3"><span>Мои магазины</span></a></li>
+                        <li><a href="#main-news"><span>Мои новости</span></a></li>
+                        <li><a href="#fragment-5"><span>Мои сообщения</span></a></li>
+                        <li><a href="#fragment-6"><span>Моя хвасталка</span></a></li>
+                        <li><a href="#fragment-7"><span>Мои настройки</span></a></li>
+                    </ul>
+                    <div id="fragment-1">
+                        Личная информация пользователя
+                    </div>
+                    <div id="fragment-2">
+                        Просмотр своих текущих закупок
+                    </div>
+                    <div id="fragment-3">
+                        Список магазинов
+                    </div>
+                    <div id="main-news" class="sub-menu">
+                        <!-- Новости от закупок и магазинов -->
+                        <ul>
+                            <li><a href="#news-purchase"><span>Уведомления</span></a></li>
+                            <li><a href="#news-shop"><span>Новости магазинов</span></a></li>
+                            <li><a href="#news-shop-1"><span></span><span>"Экономка"</span></a></li>
+                            <li><a href="#news-shop-2"><span></span><span>"Get Dressed"</span></a></li>
+                        </ul>
+                        <div id="news-purchase">
+                            Уведомления.
+                            Новости по текущим закупкам.
+                        </div>
+                        <div id="news-shop">
+                            Новости магазинов.
+                        </div>
+                        <div id="news-shop-1">
+                            Новости магазина "Экономка".
+                        </div>
+                        <div id="news-shop-2">
+                            Новости магазина "Get Dressed".
+                        </div>
+                    </div>
+                    <div id="fragment-5">
+                        Просмотр и отправка сообщений пользователям, продовцам, закупкам
+                    </div>
+                    <div id="fragment-6">
+                        Просмотр рекламы от магазинов и пользователей
+                    </div>
+                    <div id="fragment-7">
+                        Настройки приложения
+                    </div>
+                </div>
+            </div>
+
+        </div>
+ 
+        <script>
+            $("#main-menu").tabs();
+            $("#main-news").tabs();
+            
+            $('#main-menu a[href="#main-news"]').click();
+        </script>
+
+    </body>
+</html>

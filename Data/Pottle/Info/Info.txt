@@ -1,0 +1,8 @@
+Объекты (entities), поддерживающие поис по ключевым словам - KeywordAttribute ([Keyword]):
+- Страна ([Country]);
+- Компания ([Company]);
+- Торговая марка ([Trademark]);
+- Поставщик ([Supplier]);
+- Товар ([Product]);
+- Товар поставщика ([SupplierProduct]);
+- товар закупки ([StorePurchaseProduct]);

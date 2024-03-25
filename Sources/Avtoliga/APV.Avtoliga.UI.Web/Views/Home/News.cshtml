@@ -1,0 +1,49 @@
+﻿@using APV.Avtoliga.UI.Web.Models;
+@using APV.Avtoliga.UI.Web.Models.Entities
+@{
+    ViewBag.Title = "News";
+    Layout = "~/Views/Layout.cshtml";
+}
+@model NewsModel
+
+<div class="b-body" ng-controller="NewsController" ng-init="init()">
+
+    <h1>Новости магазина</h1>
+
+    <ul class="page_tabs">
+        @if (@Model.Archive)
+        {
+            <li><a href="@Url.Action("News", "Home")">Свежие</a></li><li class="active">Архив новостей</li>
+        }
+        else
+        {
+            <li class="active">Свежие</li><li><a href="@Url.Action("NewsArchive", "Home")">Архив новостей</a></li>
+        }
+    </ul>
+
+    <ul class="list_content min-height-150">
+        @foreach (NewsInfo news in Model.News)
+        {
+            <li>
+                <div class="b-header">
+                    <h2>@news.Caption</h2>
+                    <div class="b-btn_like @(news.Liked ? "active" : "")" id="news_@news.NewsId">
+                        <a href="#" ng-click="toggle('@news.NewsId')">♥</a>
+                        <span class="count">@news.Likes</span>
+                    </div>
+                    <div class="date">@news.CreatedAt</div>
+                </div>
+                @if (news.LogoUrl != null)
+                {
+                    <img alt="Фото" src="@news.LogoUrl" />
+                }
+                else
+                {
+                    <img alt="" src="/" />
+                }
+                @Html.Raw(news.TextP)
+            </li>
+        }
+    </ul>
+
+</div>

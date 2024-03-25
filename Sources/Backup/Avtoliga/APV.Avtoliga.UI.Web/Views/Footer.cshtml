@@ -1,0 +1,60 @@
+﻿@using APV.Avtoliga.UI.Web.Controllers.API
+@using APV.Avtoliga.UI.Web.Models.Entities
+@{
+    var producers = @SearchController.GetAllProducers(4);
+}
+
+<div class="b-footer">
+
+    <ul class="sitemap">
+        <li>
+            <h3>О магазине</h3>
+            <ul>
+                <li><a href="/about/">Общая информация</a></li>
+                <li><a href="/responses/">Отзывы покупателей</a></li>
+                <li><a href="/news/">Новости</a></li>
+                <li><a href="/contacts/">Контакты</a></li>
+                <li><a href="/feedback/">Обратная связь</a></li>
+                <li><a href="/requisites/">Реквизиты</a></li>
+            </ul>
+        </li>
+        <li>
+            <h3>Запчасти</h3>
+            <ul>
+                <li><a href="/catalog/">Каталог</a></li>
+                <li><a href="/catalog/search.html">Поиск запчастей</a></li>
+                <li><a href="/producers/">Производители</a></li>
+                <li><a href="/offers/">Спецпредложения</a></li>
+                <li><a href="/articles/">Статьи</a></li>
+                <li><a href="/price.xls">Скачать прайс (.xls)</a></li>
+            </ul>
+        </li>
+        <li>
+            <h3>Помощь</h3>
+            <ul>
+                <li><a href="/help/how-to-order.html">Как заказать</a></li>
+                <li><a href="/help/delivery.html">Доставка заказа</a></li>
+                <li><a href="/help/guarantee.html">Оплата и гарантии</a></li>
+                <li><a href="/help/back.html">Возврат деталей</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <ul class="manufacturers">
+        @foreach (ProducerInfo producerInfo in producers)
+        {
+            <li>
+                <a href="@producerInfo.Url">
+                    <img title="@producerInfo.Name" alt="@producerInfo.Name" src="@producerInfo.LogoUrl" />
+                </a>
+            </li>
+        }
+    </ul>
+
+    <address>
+        &copy; 2015 Автоберг &mdash; Кузовные запчасти и оптика<br/>
+        С-Пб, Московское шоссе, д.46, офис 110а<br/>
+        <a href="mailto:info@avtoliga.spb.ru">info@avtoliga.spb.ru</a>
+    </address>
+    
+</div>

@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9A902BA1-44B6-44B5-8704-A608F280084B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>APV.Pottle.WebParsers</RootNamespace>
+    <AssemblyName>APV.Pottle.WebParsers</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Avtoberg\AvtobergModelInfo.cs" />
+    <Compile Include="Avtoberg\AvtobergProductParser.cs" />
+    <Compile Include="Avtoberg\AvtobergSupplierProductInfo.cs" />
+    <Compile Include="Avtoberg\AvtobergTrademarkInfo.cs" />
+    <Compile Include="Avtoberg\AvtobergWebParser.cs" />
+    <Compile Include="Avtoberg\AvtobergCatalogContainerParser.cs" />
+    <Compile Include="Avtoberg\AvtobergCatalogParser.cs" />
+    <Compile Include="BaseCatalogParser.cs" />
+    <Compile Include="BaseParser.cs" />
+    <Compile Include="ColorParser.cs" />
+    <Compile Include="InfoEntities\BaseParserInfo.cs" />
+    <Compile Include="InfoEntities\CatalogContainerInfo.cs" />
+    <Compile Include="InfoEntities\CatalogPageInfo.cs" />
+    <Compile Include="InfoEntities\Collection\ProductOptionCollection.cs" />
+    <Compile Include="InfoEntities\BaseProductOptionInfo.cs" />
+    <Compile Include="InfoEntities\ImageInfo.cs" />
+    <Compile Include="ResultEntities\ParseResult.cs" />
+    <Compile Include="InfoEntities\ProductCharacteristicInfo.cs" />
+    <Compile Include="InfoEntities\ProductOptionInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="InfoEntities\SupplierProductInfo.cs" />
+    <Compile Include="Votonia\VotoniaCatalogContainerParser.cs" />
+    <Compile Include="Votonia\VotoniaCatalogParser.cs" />
+    <Compile Include="Votonia\VotoniaProductParser.cs" />
+    <Compile Include="Votonia\VotoniaProductOptionParser.cs" />
+    <Compile Include="Votonia\VotoniaSupplierProductInfo.cs" />
+    <Compile Include="Votonia\VotoniaWebParser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\APV\APV.Common\APV.Common.csproj">
+      <Project>{464E5897-E88C-4AA9-8B53-58F40D659158}</Project>
+      <Name>APV.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\APV\APV.GraphicsLibrary\APV.GraphicsLibrary.csproj">
+      <Project>{FC6B973C-89D2-421A-A2C7-76901DDEFD66}</Project>
+      <Name>APV.GraphicsLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\APV.Pottle.Common\APV.Pottle.Common.csproj">
+      <Project>{3f10f16c-ddf5-4dbe-ac2c-d8c4f9dcfd76}</Project>
+      <Name>APV.Pottle.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

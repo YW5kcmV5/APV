@@ -1,0 +1,2 @@
+﻿Info:							http://ip-api.com/docs/
+Service Url:					http://ip-api.com/

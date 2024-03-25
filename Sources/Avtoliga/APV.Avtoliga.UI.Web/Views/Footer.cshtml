@@ -1,0 +1,60 @@
+﻿@using APV.Avtoliga.UI.Web.Controllers.API
+@using APV.Avtoliga.UI.Web.Models.Entities
+@{
+    var producers = @SearchController.GetAllProducers(4);
+}
+
+<div class="b-footer">
+
+    <ul class="sitemap">
+        <li>
+            <h3>О магазине</h3>
+            <ul>
+                <li><a href="@Url.Action("About", "Home")">Общая информация</a></li>
+                <li><a href="@Url.Action("Feedbacks", "Home")">Отзывы покупателей</a></li>
+                <li><a href="@Url.Action("News", "Home")">Новости</a></li>
+                <li><a href="@Url.Action("Contacts", "Home")">Контакты</a></li>
+                <li><a href="@Url.Action("Feedback", "Home")">Обратная связь</a></li>
+                <li><a href="@Url.Action("Requisites", "Home")">Реквизиты</a></li>
+            </ul>
+        </li>
+        <li>
+            <h3>Запчасти</h3>
+            <ul>
+                <li><a href="@Url.Action("Catalog", "Home")">Каталог</a></li>
+                <li><a href="@Url.Action("Search", "Home")">Поиск запчастей</a></li>
+                <li><a href="@Url.Action("Producers", "Home")">Производители</a></li>
+                <li><a href="@Url.Action("Offers", "Home")">Спецпредложения</a></li>
+                <li><a href="@Url.Action("Articles", "Home")">Статьи</a></li>
+                <li><a href="@Url.Action("Price", "Home")">Скачать прайс (.xls)</a></li>
+            </ul>
+        </li>
+        <li>
+            <h3>Помощь</h3>
+            <ul>
+                <li><a href="@Url.Action("Index", "Home", new { type = "how_to_order" })">Как заказать</a></li>
+                <li><a href="@Url.Action("Index", "Home", new { type = "delivery" })">Доставка заказа</a></li>
+                <li><a href="@Url.Action("Index", "Home", new { type = "guarantee" })">Оплата и гарантии</a></li>
+                <li><a href="@Url.Action("Index", "Home", new { type = "back" })">Возврат деталей</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <ul class="manufacturers">
+        @foreach (ProducerInfo producerInfo in producers)
+        {
+            <li>
+                <a href="@producerInfo.Url">
+                    <img title="@producerInfo.Name" alt="@producerInfo.Name" src="@producerInfo.LogoUrl" />
+                </a>
+            </li>
+        }
+    </ul>
+
+    <address>
+        &copy; 2015 Автолига &mdash; Кузовные запчасти и оптика<br/>
+        С-Пб, Московское шоссе, д.46, офис 110а<br/>
+        <a href="mailto:info@avtoliga24.ru">info@avtoliga24.ru</a>
+    </address>
+    
+</div>

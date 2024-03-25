@@ -1,0 +1,41 @@
+﻿div.dialog-list {
+    margin: 0;
+    padding: 0;
+}
+
+div.dialog-list-title {
+    height: 16px;
+    background: none repeat scroll 0 0 #3A8104;
+    display: block;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+div.dialog-list-title > span {
+    float: right;
+}
+
+div.dialog-list-title > div {
+    float: left;
+}
+
+div.dialog-list-title > div > span {
+    color: #FFFFFF;
+}
+
+span.dialog-list-title-container-icon {
+    width: auto;
+}
+
+div.dialog-list-content {
+    min-width: 150px;
+}
+
+.dialog-list .ui-dialog-titlebar {
+     display: none;
+}
+
+.dialog-list .ui-tabs-panel {
+    margin: 0;
+    padding: 0;   
+}

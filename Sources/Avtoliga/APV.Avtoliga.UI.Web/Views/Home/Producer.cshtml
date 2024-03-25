@@ -1,0 +1,31 @@
+﻿@using APV.Avtoliga.UI.Web.Models.Entities;
+@model ProducerInfo
+@{
+    ViewBag.Title = "Producer";
+    Layout = "~/Views/Layout.cshtml";
+}
+
+<div class="b-body">
+
+    <h1>@Model.Title</h1>
+
+    <div class="b-producer">
+        
+        @if (Model.LogoUrl != null)
+        {
+            <img src="@Model.LogoUrl" />
+        }
+
+        <a class="btn-close" href="javascript:history.back()">×</a>
+
+        <div class="b-sidebar"></div>
+
+        <div class="b-gallery">
+            <h2>О компании</h2>
+            <div class="b-content">
+                @Html.Raw(@Model.About)
+            </div>
+        </div>
+    </div>
+    
+</div>

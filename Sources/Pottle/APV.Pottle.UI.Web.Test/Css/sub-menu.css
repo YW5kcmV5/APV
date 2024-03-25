@@ -1,0 +1,60 @@
+﻿div.sub-menu {
+    margin: 0;
+    padding: 8px 10px 0;
+    height: 35px;
+    border-radius: 0;
+    border-top: 0 none;
+    border-left: 0 none;
+    border-right: 0 none;
+    border-bottom: 1px solid #DAE1E8;
+    background: none repeat scroll 0 0 #F7F7F7;
+}
+
+div.sub-menu .ui-tabs-nav {
+    margin: 0;
+    padding: 8px 10px 0;
+    height: 35px;
+    border-radius: 0;
+    border-top: 0 none;
+    border-left: 0 none;
+    border-right: 0 none;
+    border-bottom: 1px solid #DAE1E8;
+    background: none repeat scroll 0 0 #F7F7F7;
+}
+
+div.sub-menu .ui-state-default {
+    border: 0 none;
+    background: none repeat scroll 0 0 #F7F7F7;
+    padding: 0;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+div.sub-menu .ui-state-hover {
+    background: none repeat scroll 0 0 #E1E7ED;
+}
+
+div.sub-menu .ui-tabs-active {
+    background: none repeat scroll 0 0 #3A8104;
+}
+
+.sub-menu span.count {
+    margin-left: 3px;
+}
+
+.sub-menu .ui-state-default .ui-tabs-anchor {
+    padding: 4px 8px;
+}
+
+.sub-menu .ui-tabs-active .ui-tabs-anchor {
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.sub-menu .ui-tabs-active .ui-tabs-anchor span {
+    cursor: pointer;
+}
+
+.sub-menu .ui-tabs-panel {
+    padding: 0;
+}

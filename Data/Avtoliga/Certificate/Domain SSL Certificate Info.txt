@@ -1,0 +1,26 @@
+﻿Данные сертификата:
+	Common name:			avtoliga24.ru
+	Organization:			Avtoliga 24
+	Organization unit:		Internet Sales
+	City/locality:			St. Petersburg
+	State/province:			St. Petersburg
+	Country/region:			RU
+
+Данные организации:
+	Organization name:		Avtoliga 24
+	Country:			Russian Federation
+	City:				St. Petersburg
+	Post index:  			196158
+	Region:				St. Petersburg
+	Street Address:			Moscow highway 46, office 110a
+	Phone:				+7 911 971 43 51
+
+Данные контактного лица:
+	First name:			Eduard
+	Last name:			Skvorcov
+	Job:				CEO
+	E-mail:				info@avtoliga24.ru
+	Phone:				+7 911 971 43 51
+	Ссылка на данные
+	о компании в открытых
+	базах данных:			www.avtoliga24.ru

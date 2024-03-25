@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BF3EACFE-B977-404C-BBBD-6A4B831F32B0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>APV.Pottle.UI.Web.Test</RootNamespace>
+    <AssemblyName>APV.Pottle.UI.Web.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Css\Base\Images\animated-overlay.gif" />
+    <Content Include="Css\Base\Images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Css\Base\Images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Css\Base\Images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Css\Base\Images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Css\Base\Images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Css\Base\Images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Css\Base\Images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Css\Base\Images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Css\Base\Images\ui-icons_222222_256x240.png" />
+    <Content Include="Css\Base\Images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Css\Base\Images\ui-icons_454545_256x240.png" />
+    <Content Include="Css\Base\Images\ui-icons_888888_256x240.png" />
+    <Content Include="Css\Base\Images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Css\Base\jquery-ui.css" />
+    <Content Include="Css\Base\jquery.ui.accordion.css" />
+    <Content Include="Css\Base\jquery.ui.all.css" />
+    <Content Include="Css\Base\jquery.ui.autocomplete.css" />
+    <Content Include="Css\Base\jquery.ui.base.css" />
+    <Content Include="Css\Base\jquery.ui.button.css" />
+    <Content Include="Css\Base\jquery.ui.core.css" />
+    <Content Include="Css\Base\jquery.ui.datepicker.css" />
+    <Content Include="Css\Base\jquery.ui.dialog.css" />
+    <Content Include="Css\Base\jquery.ui.menu.css" />
+    <Content Include="Css\Base\jquery.ui.progressbar.css" />
+    <Content Include="Css\Base\jquery.ui.resizable.css" />
+    <Content Include="Css\Base\jquery.ui.selectable.css" />
+    <Content Include="Css\Base\jquery.ui.slider.css" />
+    <Content Include="Css\Base\jquery.ui.spinner.css" />
+    <Content Include="Css\Base\jquery.ui.tabs.css" />
+    <Content Include="Css\Base\jquery.ui.theme.css" />
+    <Content Include="Css\Base\jquery.ui.tooltip.css" />
+    <Content Include="Css\Base\Minified\Images\animated-overlay.gif" />
+    <Content Include="Css\Base\Minified\Images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Css\Base\Minified\Images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Css\Base\Minified\Images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Css\Base\Minified\Images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Css\Base\Minified\Images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Css\Base\Minified\Images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Css\Base\Minified\Images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Css\Base\Minified\Images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Css\Base\Minified\Images\ui-icons_222222_256x240.png" />
+    <Content Include="Css\Base\Minified\Images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Css\Base\Minified\Images\ui-icons_454545_256x240.png" />
+    <Content Include="Css\Base\Minified\Images\ui-icons_888888_256x240.png" />
+    <Content Include="Css\Base\Minified\Images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Css\Base\Minified\jquery-ui.min.css" />
+    <Content Include="Css\Base\Minified\jquery.ui.accordion.min.css" />
+    <Content Include="Css\Base\Minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Css\Base\Minified\jquery.ui.button.min.css" />
+    <Content Include="Css\Base\Minified\jquery.ui.core.min.css" />
+    <Content Include="Css\Base\Minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Css\Base\Minified\jquery.ui.dialog.min.css" />
+    <Content Include="Css\Base\Minified\jquery.ui.menu.min.css" />
+    <Content Include="Css\Base\Minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Css\Base\Minified\jquery.ui.resizable.min.css" />
+    <Content Include="Css\Base\Minified\jquery.ui.selectable.min.css" />
+    <Content Include="Css\Base\Minified\jquery.ui.slider.min.css" />
+    <Content Include="Css\Base\Minified\jquery.ui.spinner.min.css" />
+    <Content Include="Css\Base\Minified\jquery.ui.tabs.min.css" />
+    <Content Include="Css\Base\Minified\jquery.ui.theme.min.css" />
+    <Content Include="Css\Base\Minified\jquery.ui.tooltip.min.css" />
+    <Content Include="Css\common.css" />
+    <Content Include="Css\dialog-bottom-tooltip.css" />
+    <Content Include="Css\purchase-list.css" />
+    <Content Include="Css\group-area.css" />
+    <Content Include="Css\search-box.css" />
+    <Content Include="Css\dialog-list.css" />
+    <Content Include="Css\sub-menu.css" />
+    <Content Include="Css\main-menu.css" />
+    <Content Include="Css\jquery.ui.all.modify.css" />
+    <Content Include="Css\Main-theme\Images\animated-overlay.gif" />
+    <Content Include="Css\Main-theme\Images\ui-bg_diagonal-maze_55_fbf5d0_10x10.png" />
+    <Content Include="Css\Main-theme\Images\ui-bg_flat_50_e1e7ed_40x100.png" />
+    <Content Include="Css\Main-theme\Images\ui-bg_highlight-hard_30_3a8104_1x100.png" />
+    <Content Include="Css\Main-theme\Images\ui-bg_highlight-soft_33_ffffff_1x100.png" />
+    <Content Include="Css\Main-theme\Images\ui-bg_highlight-soft_50_e1e7ed_1x100.png" />
+    <Content Include="Css\Main-theme\Images\ui-bg_highlight-soft_60_ffffff_1x100.png" />
+    <Content Include="Css\Main-theme\Images\ui-bg_inset-soft_10_ffffff_1x100.png" />
+    <Content Include="Css\Main-theme\Images\ui-icons_3a8104_256x240.png" />
+    <Content Include="Css\Main-theme\Images\ui-icons_72b42d_256x240.png" />
+    <Content Include="Css\Main-theme\Images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Css\Main-theme\Images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Css\Main-theme\jquery-ui.css" />
+    <Content Include="Css\Main-theme\jquery.ui.accordion.css" />
+    <Content Include="Css\Main-theme\jquery.ui.all.css" />
+    <Content Include="Css\Main-theme\jquery.ui.autocomplete.css" />
+    <Content Include="Css\Main-theme\jquery.ui.base.css" />
+    <Content Include="Css\Main-theme\jquery.ui.button.css" />
+    <Content Include="Css\Main-theme\jquery.ui.core.css" />
+    <Content Include="Css\Main-theme\jquery.ui.datepicker.css" />
+    <Content Include="Css\Main-theme\jquery.ui.dialog.css" />
+    <Content Include="Css\Main-theme\jquery.ui.menu.css" />
+    <Content Include="Css\Main-theme\jquery.ui.progressbar.css" />
+    <Content Include="Css\Main-theme\jquery.ui.resizable.css" />
+    <Content Include="Css\Main-theme\jquery.ui.selectable.css" />
+    <Content Include="Css\Main-theme\jquery.ui.slider.css" />
+    <Content Include="Css\Main-theme\jquery.ui.spinner.css" />
+    <Content Include="Css\Main-theme\jquery.ui.tabs.css" />
+    <Content Include="Css\Main-theme\jquery.ui.theme.css" />
+    <Content Include="Css\Main-theme\jquery.ui.tooltip.css" />
+    <Content Include="Css\Main-theme\Minified\Images\animated-overlay.gif" />
+    <Content Include="Css\Main-theme\Minified\Images\ui-bg_diagonal-maze_55_fbf5d0_10x10.png" />
+    <Content Include="Css\Main-theme\Minified\Images\ui-bg_flat_50_e1e7ed_40x100.png" />
+    <Content Include="Css\Main-theme\Minified\Images\ui-bg_highlight-hard_30_3a8104_1x100.png" />
+    <Content Include="Css\Main-theme\Minified\Images\ui-bg_highlight-soft_33_ffffff_1x100.png" />
+    <Content Include="Css\Main-theme\Minified\Images\ui-bg_highlight-soft_50_e1e7ed_1x100.png" />
+    <Content Include="Css\Main-theme\Minified\Images\ui-bg_highlight-soft_60_ffffff_1x100.png" />
+    <Content Include="Css\Main-theme\Minified\Images\ui-bg_inset-soft_10_ffffff_1x100.png" />
+    <Content Include="Css\Main-theme\Minified\Images\ui-icons_3a8104_256x240.png" />
+    <Content Include="Css\Main-theme\Minified\Images\ui-icons_72b42d_256x240.png" />
+    <Content Include="Css\Main-theme\Minified\Images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Css\Main-theme\Minified\Images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Css\Main-theme\Minified\jquery-ui.min.css" />
+    <Content Include="Css\Main-theme\Minified\jquery.ui.accordion.min.css" />
+    <Content Include="Css\Main-theme\Minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Css\Main-theme\Minified\jquery.ui.button.min.css" />
+    <Content Include="Css\Main-theme\Minified\jquery.ui.core.min.css" />
+    <Content Include="Css\Main-theme\Minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Css\Main-theme\Minified\jquery.ui.dialog.min.css" />
+    <Content Include="Css\Main-theme\Minified\jquery.ui.menu.min.css" />
+    <Content Include="Css\Main-theme\Minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Css\Main-theme\Minified\jquery.ui.resizable.min.css" />
+    <Content Include="Css\Main-theme\Minified\jquery.ui.selectable.min.css" />
+    <Content Include="Css\Main-theme\Minified\jquery.ui.slider.min.css" />
+    <Content Include="Css\Main-theme\Minified\jquery.ui.spinner.min.css" />
+    <Content Include="Css\Main-theme\Minified\jquery.ui.tabs.min.css" />
+    <Content Include="Css\Main-theme\Minified\jquery.ui.theme.min.css" />
+    <Content Include="Css\Main-theme\Minified\jquery.ui.tooltip.min.css" />
+    <Content Include="default.html" />
+    <Content Include="Image\Logo.png" />
+    <Content Include="Image\Logo_invert.png" />
+    <Content Include="Image\magglass.png" />
+    <Content Include="Image\photo_icons.png" />
+    <Content Include="Image\shop16.png" />
+    <Content Include="Image\shop16w.png" />
+    <Content Include="Image\Title.png" />
+    <Content Include="Image\Title_invert.png" />
+    <Content Include="Image\tooltip_arrow_up.gif" />
+    <Content Include="Image\transparent.png" />
+    <Content Include="Image\ui-icon-plusthick-white.png" />
+    <Content Include="Image\ui-icons-white_3a8104_256x240.png" />
+    <Content Include="Image\закупка1.jpg" />
+    <Content Include="Image\закупка2.jpg" />
+    <Content Include="Image\закупка3.jpg" />
+    <Content Include="Image\закупка4.jpg" />
+    <Content Include="Image\закупка5.jpg" />
+    <Content Include="Image\закупка6.jpg" />
+    <Content Include="Image\закупка7.jpg" />
+    <Content Include="Js\jquery-1.10.2.js" />
+    <Content Include="Js\jquery-ui-1.10.4.main.js" />
+    <Content Include="Js\jquery-ui-1.10.4.main.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51009/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

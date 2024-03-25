@@ -1,0 +1,129 @@
+﻿@using APV.Avtoliga.UI.Web;
+@using APV.Avtoliga.UI.Web.Models;
+
+@model SearchMenuModel
+@{
+    var modelJson = Model.ToJsonString();
+}
+
+<div ng-controller="SearchMenuController" ng-init="init('@modelJson')" class="b-search @(Model.ProductsInited ? Html.Raw("compact") : Html.Raw("no-compact"))">
+    
+    <form action="#" method="get">
+        
+        <fieldset>
+            
+            @if (Model.ProductsInited)
+            {
+                <div class="b-current_brand" ng-show="(trademark != null) && (model != null)">
+                    <img alt="{{model.Name}}" ng-src="{{trademark.LogoUrl}}" />
+                    <div class="brand">{{trademark.Name}}<a ng-show="producer != null" ng-href="{{producer.Url}}">({{producer.Name}})</a></div>
+                    <div class="model" ng-bind="model.DisplayName"></div>
+                    <div class="name" ng-bind="group.Name"></div>
+                </div>
+            }
+            else
+            {
+                <legend>Поиск запчасти</legend>
+            }
+
+            <label for="f_brand">Марка:</label>
+            
+            <!-- Trademarks -->
+            <select
+                style="visibility:hidden"
+                id="f_brand" data-target="f_model" data-act="models" name="brand"
+                ng-model="trademark" ng-options="trademark.Name for trademark in trademarks" ng-change="onTrademarkChange()">
+            </select>
+
+            <div class="ui_select" style="position: absolute; left: 33px; top: 103.083px;"
+                 ng-class="{'has_value': trademark != null}" ng-click="openItems($event, 0)">
+                <span class="value" ng-bind="trademark.Name"></span>
+                <div class="pointer ng-cloak" style="display: none;" ng-show="(itemsVisible == true) && (itemsMode == 0)">&nbsp;</div>
+            </div>
+
+            <label for="f_model">Модель:</label>
+            
+            <!--Models -->
+            <select
+                style="visibility:hidden"
+                id="f_model" data-target="f_name" name="model"
+                ng-model="model" ng-options="model.DisplayName for model in models">
+            </select>
+
+            <div class="ui_select" style="position: absolute; left: 33px; top: 150.167px;"
+                 ng-class="{'has_value': model != null}" ng-click="openItems($event, 1)">
+                <span class="value" ng-bind="model.DisplayName"></span>
+                <div class="pointer ng-cloak" style="display: none;" ng-show="(itemsVisible == true) && (itemsMode == 1)">&nbsp;</div>
+            </div>
+
+            <label for="f_name">Название:</label>
+            
+            <!-- Product groups -->
+            <select
+                style="visibility:hidden"
+                id="f_name" name="name" style=""
+                ng-model="group" ng-options="group.Name for group in groups">
+            </select>
+
+            <div class="ui_select" style="position: absolute; left: 33px; top: 197.25px;"
+                 ng-class="{'has_value': group != null}" ng-click="openItems($event, 2)">
+                <span class="value" ng-bind="group.Name"></span>
+                <div class="pointer ng-cloak" style="display: none;" ng-show="(itemsVisible == true) && (itemsMode == 2)">&nbsp;</div>
+            </div>
+
+            <input type="button" value="Поиск" ng-click="submit()">
+
+        </fieldset>
+
+        <div class="ui_select_list ng-cloak" 
+             ng-class="{'extended' : itemsExtended}" ng-show="itemsVisible" style="display: none;left:226px;">
+            <div class="option" ng-repeat="item in items">
+                <a rel="{{item.Id}}" title="{{item.Name}}" ng-class="{'active' : item.Selected}" ng-click="onSelectItem(item)">{{item.Name}}</a>
+            </div>
+        </div>
+
+    </form>
+    
+    @if (!Model.ProductsInited)
+    {
+        <div class="b-specoffers">
+            <h2><a href="@Url.Action("Offers", "Home")">Спецпредложения</a></h2>
+            <ul>
+
+                @if (Model.SpecialOffertOne != null)
+                {
+                    <li>
+                        <a href="@Model.SpecialOffertOne.Url">
+                            <h3>@Model.SpecialOffertOne.Name</h3>
+                            <img alt="Фото" src="@Model.SpecialOffertOne.LogoUrl">
+                            <p>@Model.SpecialOffertOne.SpecialOfferDescription</p>
+                            <div class="price">
+                                @Model.SpecialOffertOne.Cost
+                                &nbsp;<span class="ruble">руб.</span>
+                            </div>
+                            <span class="buy">Купить</span>
+                        </a>
+                    </li>
+                }
+
+                @if (Model.SpecialOffertTwo != null)
+                {
+                    <li>
+                        <a href="@Model.SpecialOffertTwo.Url">
+                            <h3>@Model.SpecialOffertTwo.Name</h3>
+                            <img alt="Фото" src="@Model.SpecialOffertTwo.LogoUrl">
+                            <p>@Model.SpecialOffertTwo.SpecialOfferDescription</p>
+                            <div class="price">
+                                @Model.SpecialOffertTwo.Cost
+                                &nbsp;<span class="ruble">руб.</span>
+                            </div>
+                            <span class="buy">Купить</span>
+                        </a>
+                    </li>
+                }
+
+            </ul>
+        </div>
+    }
+
+</div>

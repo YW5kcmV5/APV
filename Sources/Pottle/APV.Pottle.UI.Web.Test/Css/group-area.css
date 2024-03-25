@@ -1,0 +1,39 @@
+﻿.group_area_wrap {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-bottom: 1px solid #DAE1E8;
+    color: #45688E;
+    padding: 13px 10px 0;
+}
+
+.group_area {
+    padding: 1px 0 4px;
+}
+
+.group_area > span > a {
+    font-weight: normal;
+    cursor: pointer;
+    color: #3A8104;
+}
+
+.group_area > span > a:hover {
+    text-decoration: underline;
+}
+
+span.group_area_active > a {
+    font-weight: bold;
+    color: #45930B;
+}
+
+span.group_area_active > span {
+    display: inline-block;
+    vertical-align: top;
+    width: 10px;
+    margin-top: -1px;
+    margin-left: -3px;
+}
+
+.group_area_divider {
+    color: #777777;
+    font-weight: normal;
+    padding: 0 5px;
+}

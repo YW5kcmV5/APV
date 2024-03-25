@@ -1,0 +1,53 @@
+﻿@using APV.Avtoliga.UI.Web
+@using APV.Avtoliga.UI.Web.Models.Entities
+
+@model TrademarkInfo
+@{
+    ViewBag.Title = "Trademark";
+    Layout = "~/Views/Layout.cshtml";
+    var trademarkJson = @Model.ToJsonString();
+}
+
+<div class="b-body" ng-controller="TrademarkController" ng-init="init('@trademarkJson')">
+    
+    <h1>Каталог кузовных запчастей и оптики для @Model.Name</h1>
+        
+    <div class="b-brand_card">
+            
+        <a href="javascript:history.back()" class="btn-close">×</a>
+            
+        <h2>
+            <img alt="Acura" src="@Model.LogoUrl">
+        </h2>
+            
+        <hr>
+
+        <ul class="header">
+            <li><h2>Описание марки</h2></li>
+            <li><h2>Выберите модель @Model.Name</h2></li>
+        </ul>
+
+        <div class="b-description">
+            @Html.Raw(@Model.About)
+        </div>
+  
+        <table class="models">
+            <tbody>
+                <tr>
+                    <th>Название</th>
+                    <th>Год выпуска</th>
+                </tr>
+                    
+                @foreach (ModelInfo modelInfo in Model.Models)
+                {
+                    <tr>
+                        <td><a href="@modelInfo.Url">@modelInfo.Name</a></td>
+                        <td>@modelInfo.Period</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+
+</div>

@@ -1,0 +1,15 @@
+﻿@using APV.Common
+@model APV.Avtoliga.UI.Web.Models.Entities.ErrorInfo
+@{
+    
+    ViewBag.Title = "Error";
+    Layout = "~/Views/Layout.cshtml";
+}
+
+<h2>Error</h2>
+<h1><span>Url:</span>@Model.Url</h1>
+<h1><span>Method:</span>@Model.Method</h1>
+<h1><span>Controller:</span>@Model.Controller</h1>
+<h1><span>Action:</span>@Model.Action</h1>
+<h1><span>StatusCode:</span>@Model.StatusCode</h1>
+<h1><span>Exception:</span>@Model.Exception.ToTraceString()</h1>

@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Feedback";
+    Layout = "~/Views/Layout.cshtml";
+}
+
+<div class="b-body" ng-controller="FeedbackController" ng-init="init()">
+
+    <form class="feedback">
+        <h1>Обратная связь</h1>
+        <fieldset>
+            <label>Тема обращения</label>
+            <a title="Заявка на запчасть" ng-class="{'active': feedback.Type==0}" class="btn-switch" ng-click="feedback.Type=0">Заявка на запчасть</a>
+            <a title="Отзыв о магазине" ng-class="{'active': feedback.Type==1}" class="btn-switch" ng-click="feedback.Type=1">Отзыв</a>
+            <a title="Предложение о сотрудничестве" ng-class="{'active': feedback.Type==2}" class="btn-switch" ng-click="feedback.Type=2">Сотрудничество</a>
+            <label for="f_name">Как вас зовут<sup ng-show="((feedback == null) || (feedback.Name == null) || (feedback.Name.length == 0))">*</sup></label><input type="text" name="name" id="f_name" ng-model="feedback.Name"><br />
+            <label for="f_email">E-mail<sup ng-show="((feedback == null) || (feedback.Email == null) || (feedback.Email.length == 0))">*</sup></label><input type="text"name="email" id="f_email" ng-model="feedback.Email"><br />
+            <label for="f_phone">Телефон</label><input type="text" name="phone" id="f_phone" ng-model="feedback.Phone"><br />
+            <label for="f_message">Сообщение<sup ng-show="((feedback == null) || (feedback.Text == null) || (feedback.Text.length == 0))">*</sup></label><textarea name="message" id="f_message" ng-model="feedback.Text"></textarea><br />
+            <!--<label for="f_captcha">Введите код<sup>*</sup></label><input type="text" name="captcha" id="f_captcha">
+            <img title="Введите код с картинки" alt="Код" src="/img/captcha.gif" class="captcha">-->
+            <br/>
+            <input type="submit" onclick="return false;" ng-click="submit()" value="Отправить">
+        </fieldset>
+        <div class="footnote">* поля помеченные звездочкой обязательны для заполнения</div>
+    </form>
+
+</div>

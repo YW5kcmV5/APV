@@ -1,0 +1,30 @@
+﻿@using APV.Avtoliga.UI.Web.Models.Entities
+@model TrademarkInfo[]
+@{
+    ViewBag.Title = "Catalog";
+    Layout = "~/Views/Layout.cshtml";
+}
+
+<div class="b-body">
+    
+    <h1>Каталог запчастей</h1>
+
+    <div class="promo">
+        <p>Данный раздел содержит интересную информацию о марках, моделях и наличии кузовных деталей и оптики для них в нашем магазине.</p>
+    </div>
+
+    <ul class="brands">
+        
+        @foreach (TrademarkInfo trademarkInfo in Model)
+        {
+            <li>
+                <a href="@trademarkInfo.Url" title="@trademarkInfo.Name">
+                    <img alt="@trademarkInfo.Name" src="@trademarkInfo.LogoUrl" />
+                    <span class="title">@trademarkInfo.Name</span>
+                </a>
+            </li>
+        }
+
+    </ul>
+    
+</div>

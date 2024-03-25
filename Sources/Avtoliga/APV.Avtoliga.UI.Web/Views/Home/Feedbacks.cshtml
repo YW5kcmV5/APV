@@ -1,0 +1,43 @@
+﻿@using APV.Avtoliga.UI.Web.Models;
+@using APV.Avtoliga.UI.Web.Models.Entities
+@{
+    ViewBag.Title = "Feedbacks";
+    Layout = "~/Views/Layout.cshtml";
+}
+@model FeedbackModel
+
+<div class="b-body" ng-controller="FeedbacksController" ng-init="init()">
+
+    <h1>Отзывы покупателей</h1>
+
+    <ul class="page_tabs">
+        @if (@Model.Archive)
+        {
+            <li><a href="@Url.Action("Feedbacks", "Home")">Новые</a></li><li class="active">Все отзывы</li>
+        }
+        else
+        {
+            <li class="active">Новые</li><li><a href="@Url.Action("FeedbacksArchive", "Home")">Все отзывы</a></li>
+        }
+    </ul>
+    
+    <a class="add_response" href="@Url.Action("Feedback", "Home")">Оставить отзыв</a>
+
+    <ul class="list_content no-image">
+        @foreach (FeedbackInfo feedback in Model.Feedbacks)
+        {
+            <li>
+                <div class="b-header">
+                    <h2>@feedback.Name</h2>
+                    <div class="b-btn_like @(feedback.Liked ? "active" : "")" id="feedback_@feedback.FeedbackId">
+                        <a href="#" ng-click="toggle('@feedback.FeedbackId')">♥</a>
+                        <span class="count">@feedback.Likes</span>
+                    </div>
+                    <div class="date">@feedback.CreatedAt</div>
+                </div>
+                @Html.Raw(feedback.TextP)
+            </li>
+        }
+    </ul>
+
+</div>

@@ -1,0 +1,24 @@
+﻿<!-- block; opacity: 1; transition-property: all; transition-duration: 0s; transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1); -->
+<div class="rui-lightbox rui-lightbox-image ng-cloak" style="display: none;"
+     ng-controller="GalleryController" ng-init="init()" ng-show="visible" ng-click="onClick($event)">
+    <div class="rui-lightbox-locker"></div>
+    <div class="rui-lightbox-padding"></div>
+    <div class="rui-lightbox-dialog" style="display: table-cell;">
+        <div class="rui-lightbox-title"></div>
+        <div class="rui-lightbox-body">
+            <div class="rui-lightbox-body-inner">
+                <div class="rui-lightbox-scroller">
+                    <div class="rui-lightbox-content">
+                        <img src="#" ng-src="{{src}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rui-lightbox-navigation">
+            <div class="close" title="Закрыть" ng-click="close()">×</div>
+            <div class="prev ng-cloak" title="Предыдущее изображение" style="display: none;" ng-click="prev()" ng-show="prevVisible">←</div>
+            <div class="next ng-cloak" title="Следующее изображение" style="display: none;" ng-click="next()" ng-show="nextVisible">→</div>
+        </div>
+    </div>
+    <div class="rui-lightbox-padding"></div>
+</div>
